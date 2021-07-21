@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-
+    <link rel="stylesheet" href="index_2.css">
+  <link rel="icon" href="https://static.thenounproject.com/png/49001-200.png" type="image/png"></head>
 
   <body>
     <div id="loading">
       <div id="spinner"></div>
     </div>
     <div id="profile">
-     <img class="preview_img" src="IMG_1434.jpg" width="200" height="200">
-     <img class="preview_img2" src="tDCS_run.jpg" width="200" height="200">
-     <img class="preview_img3" src="Tutoring_Preparation_and_Programming.jpg" width="200" height="200">
-    </div>
+     <div><img class="profile_img" src="IMG_1434.jpg" width="150", height="150">
+     <img class="profile_img" src="tDCS_run.jpg" width="150" height="150">
+     <img class="profile_img" src="tutoring_preparation_and_programming.jpg" width="150" height="150"></div>
       <div id="username"><span style="display:none;">null</span><a href="https://github.com/DBermudez0"> Dalton H Bermudez</a></div>
       <span style="display:block;"> Engineer | Scientist </span>
       <span style="display:block;"> Play: Violin, Guitar, and Keyboard </span>
@@ -72,7 +71,9 @@
                       </div>
             </div>
 
-
+      <br></br>
+      <br></br>
+      <br></br>
       <div id="work">
         <h1>Portfolio & Publications.</h1>
         <div class="projects" id="work_section">
@@ -97,6 +98,7 @@
 
                         <a>
                         <section>
+			   <img class="preview_img" src="images/ML_glioma.png" alt="Avatar"> 
                             <div class="section_title"> Machine Learning for Glioblastoma MRI data analysis </div>
                             <div class="about_section">
                            <div class="sub_about_section">
@@ -138,6 +140,7 @@
 
                         <a>
                         <section>
+			   
                             <div class="section_title"> Machine Learning for Glioblastoma MRI data analysis  </div>
                             <div class="about_section">
                            <div class="sub_about_section">
@@ -154,6 +157,7 @@
 
                         <a>
                         <section> 
+			    
                             <div class="section_title"> Radiogenomics </div>
                             <div class="about_section">
                            <div class="sub_about_section">
@@ -194,6 +198,7 @@
 
                          <a>
                         <section> 
+			   <img class="preview_img" src="images/ChangVs.CT_corr.png" alt="Avatar"> 
                             <div class="section_title"> Signal Processing for SPECT/CT attenuation correction </div>
                             <div class="about_section">
                             <div class="sub_about_section">
@@ -271,17 +276,17 @@
                             </div>
 			<br></br>
 			   <div class="about_section">
-                            <span style="display:block;">Support Vector Machine Learning of impaired and non-impaired paw in Parkinson Rodent</span>
+                            <span style="display:block;">Support Vector Machine Learning of impaired and non-impaired paw in Parkinson Rodent Classification</span>
                             </div>
                             <div class="bottom_section">
-                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/SVM-Classification-Parkinson-Rodent','_blank')"><i class="fas fa-code"></i>  Shell</button>
+                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/SVM-Classification-Parkinson-Rodent','_blank')"><i class="fas fa-code"></i>  MATLAB</button>
                                 <span><i class="fas fa-star"></i>&nbsp; 0</span>
                                 <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
                             </div>
                         </section>
                         </a>
                         <a >
-		       <br></br>
+		      
                         <section>
                             <div class="section_title"><b>DualBoot Windows/Linux Psychtoolbox</b></div>
                             <div class="about_section">
@@ -295,16 +300,80 @@
                         </section>
                         </a></div>
 		<br></br>
+      
       <h1>Outreach.</h1>
-	<div>
-	<a href="Courses/Summer_Upward_Bound/Course1.html" target="_blank"> Intro to BME: For High School Students </a>
-	</div>
+	<a href="Courses/Summer_Upward_Bound/Course1.html" target="_blank">Intro to BME: For High School Students</a>
+
       <br></br>
       <div id="footer">
         <a href="https://github.com/ngebodh/ngebodh.github.io" target="_blank">Most templated taken from 
 Nigel Gebodh GitHub repository</a>
       </div>
     </div>
+
+<script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("blog.json", function(blog) {
+        blog = blog || [];
+        if (blog.length == 0) {
+          return (document.getElementById("blog_section").style.display =
+            "none");
+        }
+        for (var i = 0; i < blog.length; i++) {
+          $("#blogs").append(`
+            <a href="./blog/${blog[i].url_title}/" target="_blank">
+                <section>
+                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
+                    <div class="blog_container">
+                        <div class="section_title">${blog[i].title}</div>
+                        <div class="about_section">
+                            ${blog[i].sub_title}
+                        </div>
+                    </div>
+                </section>
+            </a>
+            `);
+        }
+      }).fail(function() {
+        return (document.getElementById("blog_section").style.display = "none");
+      });
+    </script>
+
+    <script>
+      const magicProjectsGrid = new MagicGrid({
+        container: "#work_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
+
+      const magicForksGrid = new MagicGrid({
+        container: "#forks_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
+
+      $("document").ready(() => {
+        magicProjectsGrid.listen();
+        magicForksGrid.listen();
+      });
+    </script>
+  
   
 
 </body></html>
