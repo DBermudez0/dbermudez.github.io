@@ -1,5 +1,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
 </style>
 @import url("https://fonts.googleapis.com/css?family=Questrial");
 
