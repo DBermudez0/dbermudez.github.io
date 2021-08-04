@@ -250,6 +250,10 @@ body {
   font-weight: bold;
 }
 
+#German {
+  font-size: 8px;
+}
+
 #username span {
   font-size: 24px;
 }
@@ -270,6 +274,11 @@ body {
   color: #fff !important;
   text-decoration: none;
   font-weight: bold;
+}
+
+#German a {
+ color: #fff !important;
+ text-decoration: none;
 }
 
 #about a:hover,
