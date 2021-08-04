@@ -276,10 +276,6 @@ body {
   font-weight: bold;
 }
 
-#German a {
- color: #fff !important;
- text-decoration: none;
-}
 
 #about a:hover,
 #username a:hover {
@@ -308,6 +304,11 @@ body {
 .projects {
    margin-left: -15px;
   /* align section w/ heading above */
+}
+
+.German spam a {
+ color: #fff !important;
+ text-decoration: none;
 }
 
 .projects a {
