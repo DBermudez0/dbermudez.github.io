@@ -252,6 +252,7 @@ body {
 
 #German {
   font-size: 8px;
+  color: white;
 }
 
 #username span {
@@ -306,8 +307,8 @@ body {
   /* align section w/ heading above */
 }
 
-.German span a {
- color: #fff !important;
+.German a {
+ color: white !important;
  text-decoration: none;
 }
 
