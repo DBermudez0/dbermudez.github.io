@@ -1,2 +1,21 @@
-plugins: 
+[
+ {
+  "username": "dbermudez",
+  "name": null,
+  "userimg": "IMG_1434.jpg",
+  "sort": "created",
+  "order": "asc",
+  "includeFork": false,
+  "theme": "light.css",
+  "types": [
+   "owner"
+  ],
+  "twitter": null,
+  "linkedin": null,
+  "medium": null,
+  "dribbble": null
+ }
+]
+
+gems: 
       - jekyll-sitemap
