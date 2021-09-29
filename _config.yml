@@ -1,3 +1,2 @@
 url: "https://dbermudez0.github.io/dbermudez.github.io/"
-plugins: 
-      - jekyll-sitemap
+gem: jekyll-sitemap
