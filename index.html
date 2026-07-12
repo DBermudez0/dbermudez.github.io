@@ -1,673 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="_Ig78k-38EJQtRIqJE-zlenFsyXh3p47fZCB39Ge12E">
+  <meta name="description" content="Dalton H. Bermudez — PhD Candidate in Medical Physics at UW–Madison. Neuroimaging, Medical Imaging, Machine Learning, Signal Processing.">
+  <meta name="keywords" content="Dalton Bermudez, Medical Physics, Neuroimaging, MRI, Machine Learning, UW-Madison">
+  <meta name="author" content="Dalton H. Bermudez">
+  <meta property="og:title" content="Dalton H. Bermudez — Medical Physics Researcher">
+  <meta property="og:description" content="PhD Candidate · UW–Madison · Medical Physics, Neuroimaging & Machine Learning">
+  <title>Dalton H. Bermudez</title>
 
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <meta name="google-site-verification" content="_Ig78k-38EJQtRIqJE-zlenFsyXh3p47fZCB39Ge12E" />
-     <meta name="description" content="Dalton Bermudez research interests homepage" >
-     <meta name="keywords" content="Dalton Bermudez,Research interests,Neuroimaging,Medical Imaging,Image/Signal Processing,Machine Learning,Cognitive Neuroscience">
-     <meta name="author" content="Dalton Bermudez">
-    <title>dbermudez</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    <link rel="stylesheet" href="index_2.css">
-  <link rel="icon" href="images/letter_D.png" type="image/png"></head>
-	<head>
-	<style>
-		a.German:link {
-  			text-decoration: none;
-		}
-		a.German:hover {
-  			color: white;
-  			background-color: transparent;
-  			text-decoration: underline;
-		}
-		a.CV:hover {
-			text-decoration: underline;
-		}
-		a.RI:link {
-  			text-decoration: none;
-		}
-		a.RI:hover {
-  			color: white;
-  			background-color: transparent;
-  			text-decoration: underline;
-		}
-		a.RI.hover {
-			text-decoration: underline;
-		}
-		i {
-  			padding-top: 1px;
-  			padding-right: 20px;
-  			padding-bottom: 1px;
-  			padding-left: 20px;
-		}
-		h1 {
-  			font-size: 40px;
-		}
+  <link rel="icon" href="images/letter_D.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-		h2 {
-  			font-size: 30px;
-		}
+<style>
+/* ═══════════════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════════════ */
+:root {
+  --dark:       #0B1929;
+  --dark-2:     #0F2236;
+  --surface:    #F0F4F8;
+  --card:       #FFFFFF;
+  --border:     #D1D9E0;
+  --accent:     #1D6FD8;
+  --accent-h:   #1559B0;
+  --accent-2:   #0891B2;
+  --highlight:  #C2410C;   /* Dalton's name in author lists */
+  --tag-pub:    #EFF6FF;
+  --tag-c:      #1D4ED8;
+  --tag-pre:    #FFF7ED;
+  --tag-pre-c:  #9A3412;
+  --tag-abs:    #F0FDF4;
+  --tag-abs-c:  #166534;
+  --text:       #1A202C;
+  --muted:      #64748B;
+  --rule:       rgba(0,0,0,0.08);
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow:     0 4px 16px rgba(0,0,0,0.09);
+  --ff-display: 'DM Serif Display', Georgia, serif;
+  --ff-body:    'DM Sans', system-ui, sans-serif;
+  --ff-mono:    'Space Mono', monospace;
+  --nav-h:      64px;
+  --r:          10px;
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; scroll-padding-top:var(--nav-h); }
+body { font-family:var(--ff-body); color:var(--text); background:var(--surface); -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; display:block; }
+@media(prefers-reduced-motion:reduce){ *{ animation-duration:.001ms!important; transition-duration:.001ms!important; } }
 
-		p {
-  			font-size: 20px;
-			}
-		
-	</style>
-	</head>
+/* ═══════════════════════════════════════════════════
+   LOADING
+═══════════════════════════════════════════════════ */
+#loading {
+  position:fixed; inset:0; background:var(--dark);
+  display:flex; align-items:center; justify-content:center;
+  z-index:9999; transition:opacity .6s ease;
+}
+#loading.fade { opacity:0; pointer-events:none; }
+.spinner {
+  width:40px; height:40px;
+  border:3px solid rgba(255,255,255,0.15);
+  border-top-color:var(--accent);
+  border-radius:50%;
+  animation:spin .8s linear infinite;
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }
 
-  <body>
-    <div id="loading">
-      <div id="spinner"></div>
+/* ═══════════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════════ */
+.nav {
+  position:sticky; top:0; z-index:500;
+  height:var(--nav-h);
+  background:rgba(11,25,41,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.07);
+  display:flex; align-items:center;
+  padding:0 clamp(16px,5vw,56px);
+  gap:24px;
+}
+.nav-brand {
+  font-family:var(--ff-display); font-style:italic;
+  font-size:22px; color:#fff; flex-shrink:0;
+  letter-spacing:-0.01em;
+}
+.nav-links {
+  display:flex; align-items:center; gap:4px;
+  list-style:none; margin-left:auto;
+}
+.nav-links a {
+  display:block; padding:6px 12px; border-radius:6px;
+  font-size:13.5px; font-weight:500; color:rgba(255,255,255,0.72);
+  transition:color .15s, background .15s;
+}
+.nav-links a:hover, .nav-links a.active { color:#fff; background:rgba(255,255,255,0.08); }
+.nav-links .btn-cv {
+  margin-left:8px; padding:7px 16px;
+  background:var(--accent); color:#fff!important; border-radius:7px;
+  font-weight:600; transition:background .15s;
+}
+.nav-links .btn-cv:hover { background:var(--accent-h); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px;
+  background:none; border:none; cursor:pointer; padding:4px; margin-left:auto;
+}
+.hamburger span { display:block; width:22px; height:2px; background:#fff; border-radius:2px; transition:all .25s; }
+
+/* ═══════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════ */
+.hero {
+  background:linear-gradient(160deg, var(--dark) 0%, var(--dark-2) 55%, #0D2B4A 100%);
+  padding:72px clamp(20px,5vw,80px) 64px;
+  position:relative; overflow:hidden;
+}
+.hero::before {
+  content:"";
+  position:absolute; inset:0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.025) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.025) 40px);
+  pointer-events:none;
+}
+.hero-inner {
+  position:relative; max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:1fr auto; align-items:center; gap:48px;
+}
+.hero-photos {
+  display:flex; gap:12px; margin-bottom:28px;
+}
+.hero-photos img {
+  width:80px; height:80px; border-radius:50%;
+  object-fit:cover;
+  border:2.5px solid rgba(255,255,255,0.18);
+  box-shadow:0 2px 12px rgba(0,0,0,0.4);
+}
+.hero-eyebrow {
+  font-family:var(--ff-mono); font-size:12px; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--accent-2); margin-bottom:14px;
+}
+.hero h1 {
+  font-family:var(--ff-display); font-size:clamp(38px,6vw,68px);
+  font-weight:400; line-height:1.05; color:#fff;
+  margin-bottom:14px; letter-spacing:-0.015em;
+}
+.hero h1 em { font-style:italic; color:rgba(255,255,255,0.7); }
+.hero-role {
+  font-size:17px; font-weight:500; color:rgba(255,255,255,0.78);
+  margin-bottom:20px; line-height:1.5;
+}
+.hero-role span { color:rgba(255,255,255,0.45); margin:0 8px; }
+.hero-blurb {
+  font-size:15px; color:rgba(255,255,255,0.55); line-height:1.7;
+  max-width:560px; margin-bottom:32px;
+}
+.socials { display:flex; gap:14px; flex-wrap:wrap; }
+.social-link {
+  display:flex; align-items:center; gap:8px;
+  padding:8px 16px; border-radius:8px;
+  border:1px solid rgba(255,255,255,0.15);
+  color:rgba(255,255,255,0.75); font-size:13px; font-weight:500;
+  transition:all .18s;
+}
+.social-link:hover { background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.3); }
+.social-link i { font-size:15px; }
+.hero-stats {
+  display:flex; flex-direction:column; gap:20px; flex-shrink:0;
+  border-left:1px solid rgba(255,255,255,0.1); padding-left:40px;
+}
+.stat-item { text-align:center; }
+.stat-num {
+  font-family:var(--ff-display); font-size:36px; color:#fff;
+  font-weight:400; display:block; line-height:1;
+}
+.stat-label { font-size:11px; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:.12em; margin-top:4px; display:block; }
+
+/* ═══════════════════════════════════════════════════
+   LAYOUT SHELL
+═══════════════════════════════════════════════════ */
+.container { max-width:1100px; margin:0 auto; padding:0 clamp(16px,4vw,48px); }
+section { padding:72px 0; }
+section:nth-child(even) { background:var(--card); }
+
+.section-header { margin-bottom:40px; }
+.section-eyebrow {
+  font-family:var(--ff-mono); font-size:11.5px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); font-weight:700;
+  margin-bottom:10px; display:block;
+}
+.section-title {
+  font-family:var(--ff-display); font-size:clamp(28px,4vw,40px);
+  font-weight:400; color:var(--text); line-height:1.1;
+}
+
+/* ═══════════════════════════════════════════════════
+   ABOUT SECTION
+═══════════════════════════════════════════════════ */
+.about-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+}
+.about-card {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r); padding:24px; box-shadow:var(--shadow-sm);
+}
+.about-card-icon {
+  width:40px; height:40px; border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-size:16px; margin-bottom:14px;
+}
+.about-card h3 {
+  font-size:14px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.08em; color:var(--muted); margin-bottom:12px;
+}
+.about-card p, .about-card li { font-size:14px; line-height:1.65; color:var(--text); }
+.about-card ul { list-style:none; display:flex; flex-wrap:wrap; gap:7px; }
+.skill-tag {
+  font-family:var(--ff-mono); font-size:11.5px;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:5px; padding:3px 9px; color:var(--muted);
+}
+.ri-link { color:var(--accent); text-decoration:underline; }
+
+/* ═══════════════════════════════════════════════════
+   EDUCATION TIMELINE
+═══════════════════════════════════════════════════ */
+.timeline { position:relative; padding-left:28px; }
+.timeline::before {
+  content:""; position:absolute; left:7px; top:6px; bottom:6px;
+  width:2px; background:linear-gradient(180deg,var(--accent),var(--accent-2));
+  border-radius:2px;
+}
+.timeline-item { position:relative; margin-bottom:36px; }
+.timeline-item:last-child { margin-bottom:0; }
+.timeline-dot {
+  position:absolute; left:-25px; top:6px;
+  width:14px; height:14px; border-radius:50%;
+  background:var(--accent); border:2.5px solid var(--card);
+  box-shadow:0 0 0 3px rgba(29,111,216,0.25);
+}
+.timeline-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); padding:22px 24px;
+  box-shadow:var(--shadow-sm);
+}
+.timeline-degree {
+  font-family:var(--ff-mono); font-size:11px; font-weight:700;
+  color:var(--accent); text-transform:uppercase; letter-spacing:.1em;
+  margin-bottom:6px; display:block;
+}
+.timeline-school {
+  font-size:17px; font-weight:600; color:var(--text); margin-bottom:4px;
+}
+.timeline-field {
+  font-size:14px; color:var(--muted);
+}
+.timeline-badge {
+  display:inline-block; margin-top:10px; padding:4px 12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#fff; font-size:12px; font-weight:600; border-radius:20px;
+}
+
+/* ═══════════════════════════════════════════════════
+   PUBLICATIONS
+═══════════════════════════════════════════════════ */
+.pub-year-group { margin-bottom:44px; }
+.pub-year-label {
+  font-family:var(--ff-display); font-size:24px; color:var(--accent);
+  padding-bottom:12px; border-bottom:2px solid var(--border);
+  margin-bottom:20px;
+}
+.pub-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); padding:20px 22px;
+  margin-bottom:14px; box-shadow:var(--shadow-sm);
+  display:grid; grid-template-columns:auto 1fr; gap:16px;
+  transition:box-shadow .18s, transform .18s;
+}
+.pub-card:hover { box-shadow:var(--shadow); transform:translateY(-1px); }
+.pub-thumb {
+  width:72px; height:72px; border-radius:7px;
+  object-fit:cover; background:var(--surface);
+  flex-shrink:0; border:1px solid var(--border);
+}
+.pub-thumb-placeholder {
+  width:72px; height:72px; border-radius:7px;
+  background:linear-gradient(135deg,#EFF6FF,#DBEAFE);
+  border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--accent); font-size:22px; flex-shrink:0;
+}
+.pub-content { min-width:0; }
+.pub-badges { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
+.badge {
+  font-family:var(--ff-mono); font-size:10.5px; font-weight:700;
+  padding:2px 8px; border-radius:4px; letter-spacing:.04em;
+}
+.badge-paper  { background:var(--tag-pub); color:var(--tag-c); }
+.badge-review { background:#F0FDF4; color:#166534; }
+.badge-pre    { background:var(--tag-pre); color:var(--tag-pre-c); }
+.badge-abs    { background:var(--tag-abs); color:var(--tag-abs-c); }
+.badge-report { background:#FDF4FF; color:#7E22CE; }
+.pub-title {
+  font-size:15px; font-weight:600; line-height:1.45;
+  color:var(--text); margin-bottom:7px;
+}
+.pub-authors {
+  font-size:13px; color:var(--muted); line-height:1.5; margin-bottom:10px;
+}
+.pub-authors strong { color:var(--highlight); font-weight:600; }
+.pub-footer { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.pub-btn {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 14px; border-radius:6px;
+  background:var(--accent); color:#fff;
+  font-size:12.5px; font-weight:600;
+  transition:background .15s;
+}
+.pub-btn:hover { background:var(--accent-h); }
+.pub-meta {
+  font-family:var(--ff-mono); font-size:11.5px; color:var(--muted);
+  display:flex; gap:12px;
+}
+.pub-meta span { display:flex; align-items:center; gap:4px; }
+
+/* ═══════════════════════════════════════════════════
+   PROJECTS / CODE
+═══════════════════════════════════════════════════ */
+.projects-grid {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
+}
+.project-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); padding:22px 22px 18px;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow .18s, transform .18s;
+}
+.project-card:hover { box-shadow:var(--shadow); transform:translateY(-2px); }
+.project-cat {
+  font-family:var(--ff-mono); font-size:10.5px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.12em; color:var(--accent-2);
+  margin-bottom:10px; display:block;
+}
+.project-title {
+  font-size:15px; font-weight:700; color:var(--text);
+  margin-bottom:10px; line-height:1.35;
+}
+.project-desc { font-size:13.5px; color:var(--muted); line-height:1.6; margin-bottom:14px; }
+.project-links { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.project-btn {
+  display:inline-flex; align-items:center; gap:5px;
+  padding:5px 12px; border-radius:6px; font-size:12.5px; font-weight:600;
+  border:1px solid var(--border); color:var(--text);
+  transition:all .15s;
+}
+.project-btn:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
+.project-btn i { font-size:11px; }
+.project-stat { font-family:var(--ff-mono); font-size:11.5px; color:var(--muted); display:flex; align-items:center; gap:4px; }
+.project-list { list-style:none; }
+.project-list li {
+  padding:11px 0; border-bottom:1px dotted var(--border);
+  display:flex; align-items:flex-start; gap:12px;
+}
+.project-list li:last-child { border-bottom:none; padding-bottom:0; }
+.project-list .pname { font-size:13.5px; font-weight:500; flex:1; line-height:1.4; }
+
+/* ═══════════════════════════════════════════════════
+   AWARDS
+═══════════════════════════════════════════════════ */
+.awards-grid {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+}
+.award-item {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); padding:16px 18px;
+  display:flex; align-items:flex-start; gap:14px;
+  box-shadow:var(--shadow-sm);
+}
+.award-icon {
+  width:36px; height:36px; flex-shrink:0; border-radius:8px;
+  background:linear-gradient(135deg,#FEF3C7,#FDE68A);
+  display:flex; align-items:center; justify-content:center;
+  font-size:15px;
+}
+.award-text { font-size:13.5px; line-height:1.5; color:var(--text); font-weight:500; }
+
+/* ═══════════════════════════════════════════════════
+   OUTREACH
+═══════════════════════════════════════════════════ */
+.outreach-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-bottom:36px; }
+.outreach-card {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r); padding:22px; box-shadow:var(--shadow-sm);
+  display:flex; flex-direction:column; gap:10px;
+  transition:box-shadow .18s;
+}
+.outreach-card:hover { box-shadow:var(--shadow); }
+.outreach-card h3 { font-size:15px; font-weight:700; color:var(--text); line-height:1.35; }
+.outreach-card p { font-size:13.5px; color:var(--muted); line-height:1.6; flex:1; }
+.outreach-btn {
+  align-self:flex-start; margin-top:auto;
+  display:inline-flex; align-items:center; gap:6px;
+  padding:7px 16px; border-radius:7px;
+  background:var(--accent); color:#fff; font-size:13px; font-weight:600;
+  transition:background .15s;
+}
+.outreach-btn:hover { background:var(--accent-h); }
+
+.scholarship-card {
+  background:linear-gradient(135deg,#0B1929,#0D2B4A);
+  border-radius:var(--r); padding:32px 36px; color:#fff;
+  border:1px solid rgba(255,255,255,0.1);
+}
+.scholarship-card h3 {
+  font-family:var(--ff-display); font-size:24px; font-style:italic;
+  color:#fff; margin-bottom:14px;
+}
+.scholarship-card p { font-size:14px; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:10px; }
+.scholarship-card a { color:var(--accent-2); text-decoration:underline; }
+.scholarship-card .sch-links { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+.sch-btn {
+  display:inline-flex; align-items:center; gap:7px;
+  padding:8px 20px; border-radius:8px;
+  background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2);
+  color:#fff; font-size:13px; font-weight:600;
+  transition:all .18s;
+}
+.sch-btn:hover { background:rgba(255,255,255,0.2); }
+
+/* ═══════════════════════════════════════════════════
+   HOBBIES
+═══════════════════════════════════════════════════ */
+.hobbies-intro { font-size:13.5px; color:var(--muted); margin-bottom:28px; line-height:1.6; }
+.hobbies-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.hobby-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow-sm);
+}
+.hobby-label {
+  padding:12px 14px 8px;
+  font-size:13px; font-weight:600; color:var(--text);
+}
+.hobby-label span { display:block; font-size:11.5px; color:var(--muted); font-weight:400; margin-top:2px; }
+.hobby-media { position:relative; padding-bottom:56.25%; /* 16:9 */ background:var(--surface); }
+.hobby-media iframe {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  border:none;
+}
+.hobby-note {
+  padding:10px 14px 12px;
+  font-size:12px; color:var(--muted); line-height:1.55;
+}
+.hobby-note a { color:var(--accent); text-decoration:underline; }
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════ */
+footer {
+  background:var(--dark); padding:40px clamp(20px,5vw,80px);
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+footer p { font-size:13px; color:rgba(255,255,255,0.35); line-height:1.7; }
+footer a { color:rgba(255,255,255,0.55); transition:color .15s; }
+footer a:hover { color:#fff; }
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════ */
+@media(max-width:900px){
+  .hero-inner { grid-template-columns:1fr; }
+  .hero-stats { flex-direction:row; border-left:none; padding-left:0; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; justify-content:space-around; }
+  .about-grid { grid-template-columns:1fr; }
+  .projects-grid { grid-template-columns:1fr; }
+  .awards-grid { grid-template-columns:1fr; }
+  .outreach-grid { grid-template-columns:1fr; }
+  .hobbies-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:680px){
+  .nav-links { display:none; flex-direction:column; position:absolute; top:var(--nav-h); left:0; right:0; background:rgba(11,25,41,0.98); padding:16px; gap:4px; }
+  .nav-links.open { display:flex; }
+  .hamburger { display:flex; }
+  .hobbies-grid { grid-template-columns:1fr; }
+  .pub-card { grid-template-columns:1fr; }
+  .pub-thumb, .pub-thumb-placeholder { display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loading"><div class="spinner"></div></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <span class="nav-brand">Dalton H. <em>Bermudez</em></span>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#code">Code</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#outreach">Outreach</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
+    <li><a href="https://www.medphysics.wisc.edu/blog/staff/bermudez-dalton/" target="_blank" class="btn-cv"><i class="fas fa-external-link-alt" style="font-size:10px;"></i> UW Profile</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-photos">
+        <img src="IMG_1434.jpg" alt="Dalton Bermudez">
+        <img src="tDCS_run.jpg" alt="tDCS research">
+        <img src="Tutoring_Preparation_and_Programming.jpg" alt="Teaching">
+      </div>
+      <p class="hero-eyebrow">Medical Physics · Neuroimaging · Machine Learning</p>
+      <h1>Dalton H.<br><em>Bermudez</em></h1>
+      <p class="hero-role">
+        PhD Candidate <span>·</span> University of Wisconsin–Madison
+        <span>·</span> Medical Physics
+      </p>
+      <p class="hero-blurb">
+        Engineer and scientist at the intersection of MRI physics, machine learning, and clinical translation.
+        My research spans DTI motion detection, brain stimulation, and AI-assisted medical imaging.
+      </p>
+      <div class="socials">
+        <a href="https://scholar.google.com/citations?user=a4FZoYcAAAAJ&hl=en" target="_blank" class="social-link">
+          <i class="fas fa-graduation-cap"></i> Scholar
+        </a>
+        <a href="https://www.linkedin.com/in/dalton-bermudez-0916b5124/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://github.com/DBermudez0" target="_blank" class="social-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.researchgate.net/profile/Dalton-Bermudez" target="_blank" class="social-link">
+          <i class="fab fa-researchgate"></i> ResearchGate
+        </a>
+      </div>
     </div>
-    <div id="profile">
-     <div><img class="profile_img" src="IMG_1434.jpg" width="120", height="120">
-     <img class="profile_img" src="tDCS_run.jpg" width="120" height="120">
-     <img class="profile_img" src="Tutoring_Preparation_and_Programming.jpg" width="120" height="120"></div>
-      <div id="username"><span style="display:none;">null</span><a href="https://github.com/DBermudez0"> Dalton H Bermudez</a></div>
-      <span style="display:block;"> Engineer | Scientist </span>
-      <span style="display:block;"> Play: Violin, Guitar, and Keyboard </span>
-      <span style="display:block;"> Languages: English (fluent), Spanish (fluent), <a href="https://www.italki.com/user/9461199" target="_blank" style="color: white" class="German"> German (basic - Currently taking classes to improve)</a></span>
-      <span style="display:block;"> <br> <a href="https://g.co/kgs/c9SsaJ" target="_blank" style="color: white" class="RI"><b>Research Interest:</b></a> Machine Learning, Signal/Image Processing, Neuroimaging, Medical Imaging, Cognitive Neuroscience and Computational Neuroscience <br></span>
-	<span style="display:block;"> <br> Technical Skills: ROAST, MATLAB, Python, Shell, AFNI, Freesurfer, FMRIB toolbox, EEGLAB, ERPLAB, Linux, MacOs, Windows <br></span>
-	<br></br>
-      <div id="userbio" style="display: none;">undefined</div>
-      <div id="about">
-                <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-link"></i> &nbsp; <a href=""></a></span>
-                <span style="display:none;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; null</span>
-
-                <span style="display:inline-block;">
-                    <a href="https://scholar.google.com/citations?user=a4FZoYcAAAAJ&hl=en" target="_blank" class="socials"><i class="fas fa-graduation-cap"></i></a> &nbsp;&nbsp; </span>
-                <span style="display:inline-block;">
-                    <a href="https://www.linkedin.com/in/dalton-bermudez-0916b5124/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a> &nbsp;&nbsp; </span>
-                <span style="display:inline-block;">
-                    <a href="https://github.com/DBermudez0" target="_blank" class="socials"><i class="fab fa-github"></i></a> &nbsp;&nbsp; </span>
-                <span style="display:inline-block;">
-  
-	       <a href="https://www.researchgate.net/profile/Dalton-Bermudez" target="_blank" class="socials"><i class="fab fa-researchgate"></i></a> &nbsp;&nbsp; </span>
-                <br>
-
-
-                <span style="display:none !important;"><a href="https://www.linkedin.com/in/null/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
-
-                <br>
-                </div>
-                </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Publications</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">1</span>
+        <span class="stat-label">Patent Pending</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">7+</span>
+        <span class="stat-label">Fellowships</span>
+      </div>
     </div>
-  
-    <div id="display">
-	    <br></br>
-	    <br></br>
-	    <br></br>
-	    <a href="#Education">Education</a>  <a href="#work">Publication</a>    <a href="#Projects">Code</a>   <a href="#Awards">Awards & Honors</a>   <a href="#Courses">Courses</a>   <a href="#Outreach">Scholarship</a>   <a href="#Hobbies">Hobbies</a>
-	     <a href="https://sites.google.com/view/daltonhb/home?authuser=0">NYU College Prep Academy/Upward Bound Staff site</a>
-      <div id="Education">
-        <h1>Education.</h1>
-        <div class="projects" id="work_section">
-                        <a>
-                        <section>
+  </div>
+</header>
 
-                           <div class="section_title">B.E. </div>
-                            <div class="about_section">
-		            <span style="display:block;">The City College of New York (CCNY)</span>
-                            <span style="display:block;">Major: Biomedical Engineering </span>
-			   <span style="display:block;">Minor: Mathematics</span>
-				<br></br>
-			     <div class="section_title">MS </div>
-                            <div class="about_section">
-		            <span style="display:block;">University of Wisconsin-Madison</span>
-                            <span style="display:block;">Major: Medical Physics</span>
-			   
-				    <br></br>
-			   <div class="section_title"><a href="https://www.medphysics.wisc.edu/blog/staff/bermudez-dalton/" target="_blank">PhD Candidate</div></a>
-			
-                            <div class="about_section">
-		            <span style="display:block;">University of Wisconsin-Madison</span>
-                            <span style="display:block;">Major: Medical Physics</span>
-			  
-				   
-                            </div>
+<!-- ═══════ ABOUT ═══════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Background</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-card-icon"><i class="fas fa-brain"></i></div>
+        <h3>Research Interests</h3>
+        <p>
+          <a href="https://g.co/kgs/c9SsaJ" target="_blank" class="ri-link">Machine Learning</a> ·
+          Signal &amp; Image Processing · Neuroimaging ·
+          Medical Imaging · Cognitive &amp; Computational Neuroscience
+        </p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon"><i class="fas fa-globe"></i></div>
+        <h3>Languages</h3>
+        <p>
+          <strong>English</strong> — Fluent<br>
+          <strong>Spanish</strong> — Fluent<br>
+          <strong>German</strong> — Basic ·
+          <a href="https://www.italki.com/user/9461199" target="_blank" class="ri-link">Actively improving</a>
+        </p>
+        <br>
+        <h3 style="margin-top:10px;">Interests</h3>
+        <p>Violin · Guitar · Keyboard · Archery · Ice Skating · Equestrian</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon"><i class="fas fa-code"></i></div>
+        <h3>Technical Skills</h3>
+        <ul>
+          <li><span class="skill-tag">MATLAB</span></li>
+          <li><span class="skill-tag">Python</span></li>
+          <li><span class="skill-tag">Shell</span></li>
+          <li><span class="skill-tag">AFNI</span></li>
+          <li><span class="skill-tag">FreeSurfer</span></li>
+          <li><span class="skill-tag">FSL</span></li>
+          <li><span class="skill-tag">EEGLAB</span></li>
+          <li><span class="skill-tag">ERPLAB</span></li>
+          <li><span class="skill-tag">ROAST</span></li>
+          <li><span class="skill-tag">Linux</span></li>
+          <li><span class="skill-tag">macOS</span></li>
+          <li><span class="skill-tag">Windows</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-                        </section>
-                        </a>
+<!-- ═══════ EDUCATION ═══════ -->
+<section id="education">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Academic Training</span>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-degree">Bachelor of Engineering</span>
+          <div class="timeline-school">The City College of New York (CCNY)</div>
+          <div class="timeline-field">Major: Biomedical Engineering &nbsp;·&nbsp; Minor: Mathematics</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-degree">Master of Science</span>
+          <div class="timeline-school">University of Wisconsin–Madison</div>
+          <div class="timeline-field">Major: Medical Physics</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-degree">PhD Candidate</span>
+          <div class="timeline-school">
+            <a href="https://www.medphysics.wisc.edu/blog/staff/bermudez-dalton/" target="_blank" style="color:var(--accent);">
+              University of Wisconsin–Madison
+            </a>
+          </div>
+          <div class="timeline-field">Major: Medical Physics</div>
+          <span class="timeline-badge">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                      </div>
+<!-- ═══════ PUBLICATIONS ═══════ -->
+<section id="publications">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Research Output</span>
+      <h2 class="section-title">Publications</h2>
+    </div>
+
+    <!-- 2025 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2025</div>
+      <div class="pub-card">
+        <div class="pub-thumb-placeholder"><i class="fas fa-dna"></i></div>
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-review">Review Paper</span></div>
+          <div class="pub-title">MR-Guidance of Gene Therapy for Brain Diseases: Moving From Palliative Treatment to Cures</div>
+          <div class="pub-authors"><strong>Dalton Bermudez</strong>, Thomas Lilieholm, Walter Block</div>
+          <div class="pub-footer">
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jmri.29804" target="_blank" class="pub-btn"><i class="fa fa-link"></i> JMRI (2025)</a>
+            <div class="pub-meta"><span><i class="fas fa-book-reader"></i> 185 reads</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2024</div>
+      <div class="pub-card">
+        <div class="pub-thumb-placeholder"><i class="fas fa-magnet"></i></div>
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-abs">Conference Abstract</span></div>
+          <div class="pub-title">New Trick for bSSFP MRI: Simplified Sulci Detection for Predictive Mapping of Intraparenchymal Brain Therapies</div>
+          <div class="pub-authors"><strong>Dalton Bermudez</strong>, Walter Block</div>
+          <div class="pub-footer">
+            <a href="https://aapm.confex.com/aapm/2024am/meetingapp.cgi/Paper/12001" target="_blank" class="pub-btn"><i class="fa fa-link"></i> AAPM Medical Physics (2024)</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/Screen Shot 2024-01-27 at 4.10.55 PM.png" alt="PET Motion" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-review">Review Paper</span></div>
+          <div class="pub-title">Motion Correction Strategies for Enhancing Whole-Body PET Imaging</div>
+          <div class="pub-authors">James Wang, <strong>Dalton Bermudez</strong>, Weijie Chen, Divya Durgavarjhula, Caitlin Randell, Meltem Uyanik, Alan McMillan</div>
+          <div class="pub-footer">
+            <a href="https://www.frontiersin.org/articles/10.3389/fnume.2024.1257880/abstract" target="_blank" class="pub-btn"><i class="fa fa-link"></i> Frontiers Nuclear Medicine (2024)</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/Screen Shot 2024-01-27 at 4.07.55 PM.png" alt="Schizophrenia Visual" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-paper">Paper</span></div>
+          <div class="pub-title">Disrupted Third Visual Pathway Function in Schizophrenia: Evidence from Real and Implied Motion Processing</div>
+          <div class="pub-authors">Antígona Martínez, Pablo A. Gaspar, <strong>Dalton H. Bermudez</strong>, M. Belen Aburto-Ponce, Daniel C. Javitt</div>
+          <div class="pub-footer">
+            <a href="https://doi.org/10.1016/j.nicl.2024.103570" target="_blank" class="pub-btn"><i class="fa fa-link"></i> NeuroImage: Clinical (2024)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2023</div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/Screen Shot 2023-12-09 at 12.12.15 PM.png" alt="Motion Schizophrenia" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-pre">Pre-Print</span></div>
+          <div class="pub-title">Bottom-Up and Top-Down Contributions to Impaired Motion Processing in Schizophrenia</div>
+          <div class="pub-authors">Antígona Martínez, Pablo A. Gaspar, <strong>Dalton H. Bermudez</strong>, M. Belen Aburto-Ponce, Daniel C. Javitt</div>
+          <div class="pub-footer">
+            <a href="https://www.medrxiv.org/content/medrxiv/early/2023/07/08/2023.07.07.23292259.full.pdf" target="_blank" class="pub-btn"><i class="fa fa-link"></i> medRxiv (2023)</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/Alzhiemer's_paper.png" alt="Alzheimer's" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-paper">Paper</span></div>
+          <div class="pub-title">Disruption of Early Visual Processing in Amyloid-Positive Healthy Individuals and Mild Cognitive Impairment</div>
+          <div class="pub-authors">Daniel C. Javitt, Antigona Martinez, Pejman Sehatpour, Anna Beloborodova, Christian Habeck, Yunglin Gazes, <strong>Dalton H. Bermudez</strong>, Ray Razlinghi, Devangere P. Devanand, Yaakov Stern</div>
+          <div class="pub-footer">
+            <a href="https://alzres.biomedcentral.com/articles/10.1186/s13195-023-01189-7" target="_blank" class="pub-btn"><i class="fa fa-link"></i> Alzheimer's Research and Therapy (2023)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2022</div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/Emotion_Sz_paper.png" alt="Emotion Schizophrenia" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-paper">Paper</span></div>
+          <div class="pub-title">Disease-Specific Contribution of Pulvinar Dysfunction to Impaired Emotion Recognition in Schizophrenia</div>
+          <div class="pub-authors">Antigona Martinez, Russell H. Tobe, Pablo A. Gaspar, Daniel Malinsky, Elisa C. Dias, Pejman Sehatpour, Peter Lakatos, Gaurav Patel, <strong>Dalton Bermudez</strong>, Gail Silipo, Daniel C. Javitt</div>
+          <div class="pub-footer">
+            <a href="https://doi.org/10.3389/fnbeh.2021.787383" target="_blank" class="pub-btn"><i class="fa fa-link"></i> Frontiers in Behavioral Neuroscience (2022)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2020 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2020</div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/Grant_report.png" alt="D-Serine Grant" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-paper">Paper</span></div>
+          <div class="pub-title">Grant Report on D-Serine Augmentation of Neuroplasticity-Based Auditory Learning in Schizophrenia</div>
+          <div class="pub-authors">Natalie de la Garrigue, Juliana Glasser, Pejman Sehatpour, Dan V. Iosifescu, Elisa Dias, Marlene Carlson, Constance Shope, Tarek Sobeih, Tse-Hwei Choo, Melanie M. Wall, Lawrence S. Kegeles, James Gangwisch, Megan Mayer, Stephanie Brazis, Heloise M. De Baun, Stephanie Wolfer, <strong>Dalton Bermudez</strong>, et al., Joshua T. Kantrowitz</div>
+          <div class="pub-footer">
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmc7448686/" target="_blank" class="pub-btn"><i class="fa fa-link"></i> J. Psychiatry Brain Sci. (2020)</a>
+            <div class="pub-meta"><span><i class="fas fa-book-reader"></i> 164 reads</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2019 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2019</div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/ML_glioma.png" alt="Glioma ML" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-paper">Paper</span></div>
+          <div class="pub-title">Impact of Image Preprocessing on the Scanner Dependence of Multi-Parametric MRI Radiomic Features and Covariate Shift in Multi-Institutional Glioblastoma Datasets</div>
+          <div class="pub-authors">Hyemin Um, Florent Tixier, <strong>Dalton Bermudez</strong>, Joseph O. Deasy, Robert J. Young, Harini Veeraraghavan</div>
+          <div class="pub-footer">
+            <a href="https://iopscience.iop.org/article/10.1088/1361-6560/ab2f44/meta" target="_blank" class="pub-btn"><i class="fa fa-link"></i> Physics in Medicine &amp; Biology (2019)</a>
+            <div class="pub-meta"><span><i class="fas fa-book-reader"></i> 99 reads</span><span><i class="fas fa-comment-alt"></i> 42 citations</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/Radiogenomics.png" alt="Radiogenomics" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-paper">Paper</span></div>
+          <div class="pub-title">Preoperative MRI-Radiomics Features Improve Prediction of Survival in Glioblastoma Patients over MGMT Methylation Status Alone</div>
+          <div class="pub-authors">Florent Tixier, Hyemin Um, <strong>Dalton Bermudez</strong>, Aditi Iyer, Aditya Apte, J. Deasy, I. Mellinghoff, R. Young, Harini Veeraraghavan</div>
+          <div class="pub-footer">
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6363013/" target="_blank" class="pub-btn"><i class="fa fa-link"></i> Oncotarget (2019)</a>
+            <div class="pub-meta"><span><i class="fas fa-book-reader"></i> 101 reads</span><span><i class="fas fa-comment-alt"></i> 25 citations</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2018 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2018</div>
+      <div class="pub-card">
+        <div class="pub-thumb-placeholder"><i class="fas fa-chart-bar"></i></div>
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-abs">Meeting Abstract</span></div>
+          <div class="pub-title">Impact of Image Preprocessing Methods on the Robustness of MRI-Based Radiomic Classifiers for Glioblastoma</div>
+          <div class="pub-authors">H. Um, F. Tixier, <strong>D. Bermudez</strong>, A. Iyer, A. Apte, J. Deasy, I. Mellinghoff, R. Young, H. Veeraraghavan</div>
+          <div class="pub-footer">
+            <a href="https://w3.aapm.org/meetings/2018AM/programInfo/programAbs.php?sid=7547&aid=40568" target="_blank" class="pub-btn"><i class="fa fa-link"></i> AAPM Medical Physics (2018)</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-card">
+        <div class="pub-thumb-placeholder"><i class="fas fa-dna"></i></div>
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-abs">Meeting Abstract</span></div>
+          <div class="pub-title">Complementary Value of MRI-Radiomics Features and Molecular Biomarkers in Glioblastoma to Predict Overall Survival</div>
+          <div class="pub-authors">Florent Tixier, Hyemin Um, <strong>Dalton Bermudez</strong>, Aditi Iyer, Aditya Apte, J. Deasy, I. Mellinghoff, R. Young, Harini Veeraraghavan</div>
+          <div class="pub-footer">
+            <a href="https://w3.aapm.org/meetings/2018AM/programInfo/programAbs.php?sid=7513&aid=39331" target="_blank" class="pub-btn"><i class="fa fa-link"></i> AAPM Medical Physics (2018)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2017 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2017</div>
+      <div class="pub-card">
+        <img class="pub-thumb" src="images/EEG-FMRI_processing.png" alt="EEG fMRI" onerror="this.style.display='none'">
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-report">Report</span></div>
+          <div class="pub-title">Implementation of Machine Learning Algorithm to Exploit Information from Multimodal fMRI/EEG Fused Image Data</div>
+          <div class="pub-authors"><strong>Dalton Bermudez</strong>, David Steyrl, Gernot Müller-Putz, Thomas Pock</div>
+          <div class="pub-footer">
+            <a href="https://www.marshallplan.at/images/All-Papers/MP-2017/Bermudez+Dalton_760.pdf" target="_blank" class="pub-btn"><i class="fa fa-link"></i> Austrian Marshall Plan (2017)</a>
+            <a href="https://www.researchgate.net/publication/339915473_Implementation_of_Machine_Learning_Algorithm_to_Exploit_Information_from_Multimodal_fMRIEEG_Fused_Image_Data" target="_blank" class="pub-btn" style="background:var(--muted);"><i class="fab fa-researchgate"></i> ResearchGate</a>
+            <div class="pub-meta"><span><i class="fas fa-book-reader"></i> 1,130 reads</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal project -->
+    <div class="pub-year-group">
+      <div class="pub-year-label" style="color:var(--muted);">Personal Project</div>
+      <div class="pub-card">
+        <div class="pub-thumb-placeholder"><i class="fas fa-star"></i></div>
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-pre">Draft</span></div>
+          <div class="pub-title">Theory of Dark Energy: A Gravitational Wave Mechanism for Apparent Cosmic Expansion</div>
+          <div class="pub-authors"><strong>Dalton Bermudez</strong> — Personal exploration with AI-assisted writing</div>
+          <div class="pub-footer">
+            <a href="https://drive.google.com/file/d/1Z29GdDmcvCACVM4m4MhgJBzEnDr66-kB/view?usp=sharing" target="_blank" class="pub-btn"><i class="fa fa-link"></i> Draft</a>
+            <a href="https://www.linkedin.com/pulse/insight-perspective-theory-dark-energy-dalton-bermudez" target="_blank" class="pub-btn" style="background:var(--muted);"><i class="fab fa-linkedin"></i> Original idea (2018)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════ CODE / PROJECTS ═══════ -->
+<section id="code">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Open Source</span>
+      <h2 class="section-title">Code &amp; Projects</h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <span class="project-cat">Machine Learning &amp; Signal Processing</span>
+        <div class="project-title">ML &amp; Signal/Image Processing for EEG/fMRI</div>
+        <ul class="project-list">
+          <li>
+            <div class="pname">Binary SVM for Motor Imagery (EEG/fMRI)</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+              <a href="https://github.com/DBermudez0/Binary_SVM_for_Motor_Imagery" target="_blank" class="project-btn"><i class="fas fa-code"></i> MATLAB</a>
+              <span class="project-stat"><i class="fas fa-star"></i> 3</span>
             </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-       
-      <div id="work">
-        <h1>Portfolio & Publications.</h1>
-        <div class="projects" id="work_section">
+          </li>
+          <li>
+            <div class="pname">Non-Uniform Fourier Transform (NUFFT)</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+              <a href="https://github.com/DBermudez0/NUFFT_funct" target="_blank" class="project-btn"><i class="fas fa-code"></i> Python</a>
+              <span class="project-stat"><i class="fas fa-star"></i> 2</span>
+            </div>
+          </li>
+          <li>
+            <div class="pname">Motor Evoked Potential Mapping with ML Classification</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+              <a href="https://github.com/DBermudez0/MEP-map-with-MRI" target="_blank" class="project-btn"><i class="fas fa-code"></i> Python</a>
+            </div>
+          </li>
+          <li>
+            <div class="pname">Phase-Encoding Artifact Simulation</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+              <a href="https://github.com/DBermudez0/Artifact_Simulation" target="_blank" class="project-btn"><i class="fas fa-code"></i> Python</a>
+            </div>
+          </li>
+          <li>
+            <div class="pname">AFNI-Based rs-fMRI Analysis Pipeline</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+              <a href="https://github.com/DBermudez0/AFNI_rsfMRI_pip" target="_blank" class="project-btn"><i class="fas fa-code"></i> Shell</a>
+            </div>
+          </li>
+          <li>
+            <div class="pname">SVM Classification — Parkinson Rodent Model</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+              <a href="https://github.com/DBermudez0/SVM-Classification-Parkinson-Rodent" target="_blank" class="project-btn"><i class="fas fa-code"></i> MATLAB</a>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-		<a>
-				 <section>
-
-			 <div class="section_title"> 2025 Publications</div>
-			<img class="preview_img" src="images/JMRI_Fig8.tiff" width="150" height="150" alt="Avatar">
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">MR-Guidance of Gene Therapy for Brain Diseases: Moving From Palliative Treatment to Cures</span>
-			   <span><i class="fas fa-users"></i>&nbsp;<b>Dalton Bermudez </b>,Thomas Lilieholm, Walter Block</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="far fa-file-alt"></i>&nbsp;Review Paper</span>
-			     <span><i class="fas fa-book-reader"></i>&nbsp; 185</span> 
-                            <button class="button1" onclick=" window.open('https://onlinelibrary.wiley.com/doi/full/10.1002/jmri.29804','_blank')"><i class="fa fa-link"></i> JMRI (2025)</button> 
-                            </div>
-				 </section>
-			</a>
-		<a>
-			<section>
-                            <div class="section_title"> 2024 Publications</div>
-			<!--	<img class="preview_img" src="images/Screen Shot 2024-01-27 at 4.10.55 PM.png" width="150" height="150" alt="Avatar"> -->
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">New Trick for Bssfp MRI: Simplified Sulci Detection for Predictive Mapping of Intraparenchymal Brain Therapies</span>
-			   <span><i class="fas fa-users"></i>&nbsp;<b>Dalton Bermudez </b>, Walter Block</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="far fa-file-alt"></i>&nbsp; Abstract(Accepted;AAPM 2024)</span>
-			     <span><i class="fas fa-book-reader"></i>&nbsp; 185</span> 
-                            <button class="button1" onclick=" window.open(' https://aapm.confex.com/aapm/2024am/meetingapp.cgi/Paper/12001','_blank')"><i class="fa fa-link"></i> AAPM Medical Physics (2024)</button> 
-                            </div>
-
-			<br>
-			 <img class="preview_img" src="images/Screen Shot 2024-01-27 at 4.10.55 PM.png" width="150" height="150" alt="Avatar"> 
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Motion Correction Strategies for Enhancing Whole-Body PET Imaging</span>
-			   <span><i class="fas fa-users"></i>&nbsp;James Wang, <b>Dalton Bermudez </b>, Weijie Chen, Divya Durgavarjhula, Caitlin Randell, Meltem Uyanik, Alan Mcmillan</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="far fa-file-alt"></i>&nbsp;Review Paper</span>
-			       <span><i class="fas fa-book-reader"></i>&nbsp; 185</span>
-                                <button class="button1" onclick=" window.open(' https://www.frontiersin.org/articles/10.3389/fnume.2024.1257880/abstract','_blank')"><i class="fa fa-link"></i>Frontiers Nuclear Medicine (2024)</button>
-                            </div>
-					 <br></br>
-					 <img class="preview_img" src="images/Screen Shot 2024-01-27 at 4.07.55 PM.png" width="150" height="150" alt="Avatar"> 
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Disrupted third visual pathway function in schizophrenia: Evidence from real and implied motion processing</span>
-			   <span><i class="fas fa-users"></i>&nbsp;Antígona Martínez, Pablo A. Gaspar,</span><b>Dalton H. Bermudez</b>,M. Belen Aburto-Ponce, Daniel C. Javitt</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="far fa-file-alt"></i>&nbsp; Paper</span>
-			       <span><i class="fas fa-book-reader"></i>&nbsp; 185</span>
-                                <button class="button1" onclick=" window.open(' https://doi.org/10.1016/j.nicl.2024.103570','_blank')"><i class="fa fa-link"></i>Neuroimaging: Clinical (2024)</button>
-                            </div>
-                        
-                        </section>
-			
-			</a>
-
-		<a>
-				 <section>
-			
-                            <div class="section_title"> 2023 Publications</div>
-			     <img class="preview_img" src="images/Screen Shot 2023-12-09 at 12.12.15 PM.png" width="150" height="150" alt="Avatar"> 
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Bottom-up and top-down contributions to impaired motion processing in schizophrenia.</span>
-			   <span><i class="fas fa-users"></i>&nbsp;Antígona Martínez, Pablo A. Gaspar,</span><b>Dalton H. Bermudez</b>,M. Belen Aburto-Ponce, Daniel C. Javitt</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="far fa-file-alt"></i>&nbsp; Pre-Print</span>
-			       <span><i class="fas fa-book-reader"></i>&nbsp; 185</span>
-                                <button class="button1" onclick=" window.open(' https://www.medrxiv.org/content/medrxiv/early/2023/07/08/2023.07.07.23292259.full.pdf','_blank')"><i class="fa fa-link"></i>medrxiv (2023)</button>
-                            </div>
-					 <br></br>
-					 <img class="preview_img" src="images/Alzhiemer's_paper.png" width="150" height="150" alt="Avatar"> 
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Disruption of early visual processing in amyloid-positive healthy individuals and mild cognitive impairment.</span>
-			   <span><i class="fas fa-users"></i>&nbsp;Daniel C. Javitt, Antigona Martinez, Pejman Sehatpour, Anna Beloborodova, Christian Habeck, Yunglin Gazes,<b>Dalton H Bermudez</b>, Ray Razlinghi, Devangere P. Devanand, Yaakov Stern</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="far fa-file-alt"></i>&nbsp; Paper</span>
-			       <span><i class="fas fa-book-reader"></i>&nbsp; 185</span>
-                                <button class="button1" onclick=" window.open(' https://alzres.biomedcentral.com/articles/10.1186/s13195-023-01189-7','_blank')"><i class="fa fa-link"></i>Alzheimer's Research and Therapy (2023)</button>
-                            </div>
-                        
-                        </section>
-			
-			</a>
-		
-			<a>
-				<section>
-				<p>Rendering of an extracted tumor from MRI images</p>
-			        <button class="button1" onclick=" window.open('https://drive.google.com/file/d/1daH3AoEUhCAYSEGKefP_IxvuF2vqGhx_/view?usp=sharing','_blank')"><i class="fas fa-code"></i>Video</button>
-				</section>
-			</a>
-
-		<a>
-				 <section>
-			
-                            <div class="section_title"> 2022 Publications</div>
-			     <img class="preview_img" src="images/Emotion_Sz_paper.png" width="150" height="150" alt="Avatar"> 
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Disease-Specific Contribution of Pulvinar Dysfunction to Impaired Emotion Recognition in Schizophrenia.</span>
-			   <span><i class="fas fa-users"></i>&nbsp;Antigona Martinez, Russell H Tobe, Pablo A. Gaspar, Daniel Malinsky, Elisa C Dias, Pejman Sehatpour, Peter Lakatos, Gaurav Patel, <b>Dalton Bermudez</b>, Gail Silipo , Daniel C. Javitt</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="far fa-file-alt"></i>&nbsp; Paper</span>
-			       <span><i class="fas fa-book-reader"></i>&nbsp; 185</span>
-                                <button class="button1" onclick=" window.open(' https://doi.org/10.3389/fnbeh.2021.787383','_blank')"><i class="fa fa-link"></i>Frontiers in Behavioral Neuroscience (2022)</button>
-                            </div>
-                        
-                        </section>
-
-                        <a>
-                        <section>
-                            <img class="preview_img" src="images/Grant_report.png" width="150" height="150" alt="Avatar">  
-                            <div class="section_title"> 2020 Publication</div>
-                            <div class="about_section">
-                              <div class="sub_about_section">
-                            <span style="display:block;">Grant Report on D-Serine Augmentation of Neuroplasticity-Based Auditory Learning in Schizophrenia.</span>
-			   <span><i class="fas fa-users"></i>&nbsp;Natalie de la Garrigue, Juliana Glasser, Pejman Sehatpour, Dan V. Iosifescu, Elisa Dias, Marlene Carlson, Constance Shope, Tarek Sobeih, Tse-Hwei Choo, Melanie M. Wall, Lawrence S. Kegeles, James Gangwisch, Megan Mayer, Stephanie Brazis, Heloise M. De Baun, Stephanie Wolfer, <b>Dalton Bermudez</b>, Molly Arnold, Danielle Rette, Amir M. Meftah, Melissa Conant, Jeffrey A. Lieberman, Joshua T. Kantrowitz</span>
-                            </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-file-alt"></i>&nbsp; Paper</span>
-			       <span><i class="fas fa-book-reader"></i>&nbsp; 164</span>
-				<span><i class="fas fa-comment-alt"></i>&nbsp; 1</span>
-                                <button class="button1" onclick=" window.open('https://www.ncbi.nlm.nih.gov/pmc/articles/pmc7448686/','_blank')"><i class="fa fa-link"></i>  J Psychiatry Brain Sci. (2020)</button>
-                                
-                            </div>
-                        </section>
-                        </a>
-
-                        <a>
-                        <section>
-			   <img class="preview_img" src="images/ML_glioma.png" alt="Avatar"> 
-                            <div class="section_title"> Machine Learning for Glioblastoma MRI data analysis </div>
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Impact of image preprocessing on the scanner dependence of multi-parametric MRI radiomic features and covariate shift in multi-institutional glioblastoma datasets.</span>
-			   <span><i class="fas fa-users"></i>&nbsp;Hyemin Um, Florent Tixier, <b>Dalton Bermudez</b>, Joseph O Deasy, Robert J Young, Harini Veeraraghavan</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-file-alt"></i>&nbsp; Paper</span>
-			       <span><i class="fas fa-book-reader"></i>&nbsp; 99</span>
-			       <span><i class="fas fa-comment-alt"></i>&nbsp; 42</span>
-                                <button class="button1" onclick=" window.open('https://iopscience.iop.org/article/10.1088/1361-6560/ab2f44/meta','_blank')"><i class="fa fa-link"></i>  Physics in Medicine & Biology (2019)</button>
-                            </div>
-                        </section>
-                        </a>
-
-
-
-                        <a>
-                        <section>
-                            <img class="preview_img" src="images/Radiogenomics.png" width="150" height="150" alt="Avatar">  
-                            <div class="section_title"> Radiogenomics </div>
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Preoperative MRI-radiomics features improve prediction of survival in glioblastoma patients over MGMT methylation status alone. </span>
-			  <span><i class="fas fa-users"></i>&nbsp; Florent Tixier, Hyemin Um, <b>Dalton Bermudez</b>, Aditi Iyer, Aditya Apte, J Deasy, I Mellinghoff, R Young, Harini Veeraraghavan</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-file-alt"></i>&nbsp; Paper</span>
-			       <span><i class="fas fa-book-reader"></i>&nbsp; 101</span>
-			       <span><i class="fas fa-comment-alt"></i>&nbsp; 25</span>
-                                <button class="button1" onclick=" window.open('https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6363013/','_blank')"><i class="fa fa-link"></i>  Oncotarget (2019)</button>
-                            </div>
-                        </section>
-                        </a>
-
-
-
-                        <a>
-                        <section>
-			   
-                            <div class="section_title"> Machine Learning for Glioblastoma MRI data analysis  </div>
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Impact of Image Preprocessing Methods on the Robustness of MRI-Based Radiomic Classifiers for Glioblastoma. </span>
-			   <span><i class="fas fa-users"></i>&nbsp;H Um, F Tixier, <b>D Bermudez</b>, A Iyer, A Apte, J Deasy, I Mellinghoff, R Young, H Veeraraghavan</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-file-alt"></i>&nbsp; Meeting Abstract</span>
-                                <button class="button1" onclick=" window.open('https://w3.aapm.org/meetings/2018AM/programInfo/programAbs.php?sid=7547&aid=40568','_blank')"><i class="fa fa-link"></i>  MEDICAL PHYSICS (2018)</button>
-                            </div>
-                        </section>
-                        </a>
-
-                        <a>
-                        <section> 
-			    
-                            <div class="section_title"> Radiogenomics </div>
-                            <div class="about_section">
-                           <div class="sub_about_section">
-                            <span style="display:block;">Complementary Value of MRI-Radiomics Features and Molecular Biomarkers in Glioblastoma to Predict Overall Survival. </span>
-			   <span><i class="fas fa-users"></i>&nbsp;Florent Tixier, Hyemin Um, <b>Dalton Bermudez</b>, Aditi Iyer, Aditya Apte, J Deasy, I Mellinghoff, R Young, Harini Veeraraghavan</span>
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-file-alt"></i>&nbsp; Meeting Abstract</span>
-                                <button class="button1" onclick=" window.open('https://w3.aapm.org/meetings/2018AM/programInfo/programAbs.php?sid=7513&aid=39331','_blank')"><i class="fa fa-link"></i>  MEDICAL PHYSICS (2018)</button>
-                            </div>
-                        </section>
-                        </a>
-
-
-                         <a>
-                        <section>
-                            <img class="preview_img" src="images/EEG-FMRI_processing.png" width="150" height="150" alt="Avatar">   
-                            <div class="section_title"> Novel Machine Learning & Signal/Image processing applications for Simultaneous EEG/fMRI data</div>
-                            <div class="about_section">
-                            <div class="sub_about_section">
-
-                            <span style="display:block;">Implementation of Machine Learning Algorithm to Exploit Information from Multimodal fMRI/EEG Fused Image Data. </span>
-			   <span><i class="fas fa-users"></i>&nbsp;<b>Dalton Bermudez</b>, David Steyrl, Gernot Müller-Putz, Thomas Pock</span>
-
-
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-file-alt"></i>&nbsp; Report</span>
-			       <span><span><i class="fas fa-book-reader"></i>&nbsp; 1130</span>
-                                <button class="button1" onclick=" window.open('https://www.marshallplan.at/images/All-Papers/MP-2017/Bermudez+Dalton_760.pdf','_blank')"><i class="fa fa-link"></i>  Austrian Marshall Plan (2017)</button>
-			      <button class="button1" onclick=" window.open('https://www.researchgate.net/publication/339915473_Implementation_of_Machine_Learning_Algorithm_to_Exploit_Information_from_Multimodal_fMRIEEG_Fused_Image_Data','_blank')"><i class="fa fa-link"></i>  ResearchGate (2017)</button>
-                            </div>
-                        </section>
-                        </a>
- <a>
-                        <section>
-                            
-                            <div class="section_title"> Fun little project with AI</div>
-                            <div class="about_section">
-                            <div class="sub_about_section">
-
-                            <span style="display:block;">Personal Project:Theory of Dark Energy:A Gravitational Wave Mechanism for Apparent Cosmic Expansion</span>
-			   <span><i class="fas fa-users"></i>&nbsp;<b>Dalton Bermudez</b></span>
-
-
-                          </div>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-file-alt"></i>&nbsp; Draft</span>
-                                <button class="button1" onclick=" window.open('https://drive.google.com/file/d/1Z29GdDmcvCACVM4m4MhgJBzEnDr66-kB/view?usp=sharing','_blank')"><i class="fa fa-link"></i>  Draft</button>
-								<button class="button1" onclick=" window.open('https://www.linkedin.com/pulse/insight-perspective-theory-dark-energy-dalton-bermudez','_blank')"><i class="fa fa-link"></i> Orginal idea behind theory on Linkedin (2018)</button>
-			      
-                            </div>
-                        </section>
-                        </a>
-
+      <div class="project-card">
+        <span class="project-cat">Medical Imaging &amp; Deep Learning</span>
+        <div class="project-title">AI-Assisted Medical Image Processing</div>
+        <ul class="project-list">
+          <li>
+            <div class="pname">CT Deep Learning Reconstruction (reduced X-ray dose) — custom normalization</div>
+            <a href="https://github.com/DBermudez0/CT_Deep_learning_reconstruction/blob/main/IntrotoDeepLearning.ipynb" target="_blank" class="project-btn"><i class="fas fa-code"></i> Python</a>
+          </li>
+          <li>
+            <div class="pname">CNN — Breast Cancer Detection (RSNA Challenge)</div>
+            <a href="https://github.com/DBermudez0/RSNA-Screen-Breast-Cancer-Detection-Draft/blob/main/cancer-detec-v1.ipynb" target="_blank" class="project-btn"><i class="fas fa-code"></i> Python</a>
+          </li>
+        </ul>
+        <div style="margin-top:18px;">
+        <span class="project-cat">Simulations</span>
+        <div class="project-title">Transcranial Electric Stimulation</div>
+        <ul class="project-list">
+          <li>
+            <div class="pname">ROAST: Realistic Volumetric-Approach Simulator for tES</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+              <a href="https://www.opensourceimaging.org/project/roast/" target="_blank" class="project-btn"><i class="fas fa-code"></i> MATLAB</a>
+            </div>
+          </li>
+        </ul>
+        </div>
+        <div style="margin-top:18px;">
+        <span class="project-cat">Utilities</span>
+        <ul class="project-list">
+          <li>
+            <div class="pname">DualBoot Windows/Linux — Psychtoolbox Audio Setup</div>
+            <a href="https://github.com/DBermudez0/PsychAudioPort_Alsa_conf" target="_blank" class="project-btn"><i class="fas fa-code"></i> Shell</a>
+          </li>
+        </ul>
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
 
+<!-- ═══════ AWARDS ═══════ -->
+<section id="awards">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Recognition</span>
+      <h2 class="section-title">Honors &amp; Awards</h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-item"><div class="award-icon">🏅</div><div class="award-text">GEM Inclusion in Innovation Initiative (i4) Travel Award — GEM 2024 Annual Board Meeting, San Antonio, TX</div></div>
+      <div class="award-item"><div class="award-icon">✈️</div><div class="award-text">NSF Travel Grant to Black Tech Week 2024 — Cincinnati, OH</div></div>
+      <div class="award-item"><div class="award-icon">✈️</div><div class="award-text">Travel Grant — GEM Annual Board Meeting &amp; Conference 2023, Philadelphia, PA</div></div>
+      <div class="award-item"><div class="award-icon">🏆</div><div class="award-text">GEM Fellowship</div></div>
+      <div class="award-item"><div class="award-icon">🔬</div><div class="award-text">Bioengineering Research Fellowship — University of Pennsylvania</div></div>
+      <div class="award-item"><div class="award-icon">🎓</div><div class="award-text">SciMed Graduate Research Scholars (GRS) Fellowship — UW–Madison</div></div>
+      <div class="award-item"><div class="award-icon">🏥</div><div class="award-text">T32 NS105602 Trainee Award</div></div>
+      <div class="award-item"><div class="award-icon">🧬</div><div class="award-text">NIH Grant Award: Research Supplements to Promote Diversity in Health-Related Research (PA-18-906)</div></div>
+      <div class="award-item"><div class="award-icon">🇦🇹</div><div class="award-text">Austrian Marshall Plan Grant (Austrian Fulbright)</div></div>
+      <div class="award-item"><div class="award-icon">🌍</div><div class="award-text">International Research Fellowship at KTH Royal Institute of Technology</div></div>
+      <div class="award-item"><div class="award-icon">🏥</div><div class="award-text">Yale Medical School Bio-Medical Summer Research Fellowship</div></div>
+      <div class="award-item"><div class="award-icon">🏛️</div><div class="award-text">The National Society of Leadership and Success, Sigma Alpha Pi</div></div>
+      <div class="award-item"><div class="award-icon">📋</div><div class="award-text">Dean's List</div></div>
+      <div class="award-item"><div class="award-icon">⚙️</div><div class="award-text">Tau Beta Pi — Engineering Honors Society</div></div>
+      <div class="award-item"><div class="award-icon">🎓</div><div class="award-text">NYC Louis Stokes Alliance for Minority Participation Scholarship</div></div>
+    </div>
+  </div>
+</section>
 
+<!-- ═══════ OUTREACH ═══════ -->
+<section id="outreach">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Community &amp; Teaching</span>
+      <h2 class="section-title">Outreach</h2>
+    </div>
 
-
-
-
-      <div id="Projects">
-        <h1>Projects.</h1>
-        <div class="projects" id="work_section">
-                        <a>
-                        <section>
-                            <div class="section_title"><b>Machine Learning & Image/Signal Processing</b></div>
-                            <div class="about_section">
-                            <span style="display:block;">Novel Machine Learning & Signal/Image processing applications for Simultaneous EEG/fMRI data</span>
-                            </div>
-                            <div class="bottom_section">
-                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/Binary_SVM_for_Motor_Imagery','_blank')"><i class="fas fa-code"></i>  MATLAB</button>
-                                <span><i class="fas fa-star"></i>&nbsp; 3</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 2</span>
-			   <br></br>
-			   <div class="about_section">
-                            <span style="display:block;">Non-Uniform Fourier transform</span>
-                            </div>
-                            <div class="bottom_section">
-                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/NUFFT_funct','_blank')"><i class="fas fa-code"></i>  PYTHON</button>
-                                <span><i class="fas fa-star"></i>&nbsp; 2</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-			  <br></br>
-			   <div class="about_section">
-                            <span style="display:block;">Motor Evoke Potential Mapping with Machine Learning classification</span>
-                            </div>
-                            <div class="bottom_section">
-                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/MEP-map-with-MRI','_blank')"><i class="fas fa-code"></i>  PYTHON</button>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-			 <br></br>
-			   <div class="about_section">
-                            <span style="display:block;">Phased-encoding Artifact simulation</span>
-                            </div>
-                            <div class="bottom_section">
-                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/Artifact_Simulation','_blank')"><i class="fas fa-code"></i>  PYTHON</button>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-			<br></br>
-			   <div class="about_section">
-                            <span style="display:block;">AFNI based pipeline for rs-fMRI analysis</span>
-                            </div>
-                            <div class="bottom_section">
-                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/AFNI_rsfMRI_pip','_blank')"><i class="fas fa-code"></i>  Shell</button>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-			<br></br>
-			   <div class="about_section">
-                            <span style="display:block;">Support Vector Machine Learning of impaired and non-impaired paw in Parkinson Rodent Classification</span>
-                            </div>
-                            <div class="bottom_section">
-                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/SVM-Classification-Parkinson-Rodent','_blank')"><i class="fas fa-code"></i>  MATLAB</button>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-			<a>
-			<section>
-				<div class="section_title"><b>Medical Imaging Processing (Image processing/AI algorithms)</b></div>
-				<div class="about_section">
-					<span style="display:block;">Deep learning reconstruction algorithm for CT with reduce x ray exposure with <b>edited normalization function</b></span>
-				</div>
-				<div class="bottom_section">
-					<span><i class="fas fa-users"></i>&nbsp;Contributors:<b>Dalton Bermudez</b></span>
-					<button class="button1" onclick=" window.open('https://github.com/DBermudez0/CT_Deep_learning_reconstruction/blob/main/IntrotoDeepLearning.ipynb', '_blank')"<i class="fas fa-code"></i> PYTHON</button>
-				 </div>
-				<div class="about_section">
-					<span style="display:block;">Deep learning CNN - Classification of Breast Cancer Image Detection (RSNA contest)</b></span>
-				</div>
-				<div class="bottom_section">
-					<span><i class="fas fa-users"></i>&nbsp;Contributors:<b>Dalton Bermudez</b></span>
-					<button class="button1" onclick=" window.open('https://github.com/DBermudez0/RSNA-Screen-Breast-Cancer-Detection-Draft/blob/main/cancer-detec-v1.ipynb', '_blank')"<i class="fas fa-code"></i> PYTHON</button>
-				 </div>
-
-		       </section>
-		      </a>
-					
-                        <a>
-			<section>
-				<div class="section_title"><b>Simulations</b></div>
-				<div class="about_section">
-					<span style="display:block;">ROAST: Realistic vOlumetric-Approach-based Simulator for Transcranial electric stimulation</span>
-				</div>
-				<div class="bottom_section">
-					<span><i class="fas fa-users"></i>&nbsp;Contributors: Yu (Andy) Huang, Maximilian Nentwich, Takfarinas Medani, <b>Dalton Bermudez</b>, June Kang</span>
-					<button class="button1" onclick=" window.open('https://www.opensourceimaging.org/project/roast/', '_blank')"<i class="fas fa-code"></i> MATLAB</button>
-				 </div>
-		       </section>
-		      </a>
-		      <a>
-                        <section>
-                            <div class="section_title"><b>DualBoot Windows/Linux Psychtoolbox</b></div>
-                            <div class="about_section">
-                            <span style="display:block;">Psychtoolbox audio setup for dual boot Windows/Linux computer</span>
-                            </div>
-                            <div class="bottom_section">
-                                <button class="button1" onclick=" window.open('https://github.com/DBermudez0/PsychAudioPort_Alsa_conf','_blank')"><i class="fas fa-code"></i>  Shell</button>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a></div>
-		<br></br>
-	<div id="Awards">
-	<h1>Honors & Awards.</h1>
-        <h3> GEM's Inclusion in Innovation Initiative (i4) Travel award for GEM 2024 Annual Board Meeting and Conference (San Antonio, Texas)</h3>
-	<h3> NSF Travel Grant to Black Tech Week 2024 (Cincinati, Ohio)</h3>
-	<h3> Travel Grant for GEM Annual Board Meeting & Conference 2023 (Philadelphia Pennsylvania)</h3>
-	<h3> GEM Fellowship </h3>
-	<h3> Bioengineering Research Fellowship (From University of Pennsylvania)</h3>
-	<h3> SciMed Graduate Research Scholars (GRS) Fellowship</h3>
-	<h3> T32 NS105602 Trainee award</h3>
-	<h3> NIH Grant Award: Research Supplements to Promote Diversity in Health-Related Research (PA-18-906)</h3>
-	<h3> Austrian Marshall Plan Grant (Austrian Fulbright)</h3>
-	<h3> International Research Fellowship at KTH</h3>
-	<h3> Yale Medical School Bio-Medical Summer Research Fellowship</h3>
-	<h3>The National Society of Leadership and Sucess, Signma Alpha Pi</h3>
-	<h3>Dean's List</h3>
-	<h3>Tau Beta Pi ( Engineering Honors Society) </h3>
-	<h3> NYC Louise Stoke Allience for Minority Participation Scholarship</h3>
-	</div>
-      <div id="Courses">
-      <h1>Outreach.</h1>
-	<a href="Courses/Summer_Upward_Bound/Course1.html" target="_blank">Intro to BME: For High School Students</a>
-      <br></br>
-      <br></br>
-	<a href="Courses/Summer_Upward_Bound/Course_2.html" target="_blank">Intro to Bioinstrumentation (Circuits): For High School Students</a>
+    <div class="outreach-grid">
+      <div class="outreach-card">
+        <h3>Intro to Biomedical Engineering</h3>
+        <p>An introductory curriculum developed for NYU Upward Bound high school students covering fundamentals of biomedical engineering and the engineer's role in medicine.</p>
+        <a href="Courses/Summer_Upward_Bound/Course1.html" target="_blank" class="outreach-btn"><i class="fas fa-external-link-alt"></i> Open Course</a>
       </div>
-      <br></br>
-      <div id="Outreach">
-      <h2>Bermudez-Cabrera Hermandad Scholarship</h2>
-      <p>Application for NYU Upward Bound High school Students to receive a scholarship to pursue STEM-related College Major or pursue careers in Technical school. Three winners will be selected from the applicants. The money will be paid to each of the winners in two installments one when they win and the other one after they show proof of enrollment.</p>
-      <p>Deadline to start College or Technical school on Fall 2022: December 31, 2021</p>
-      <p>Requirements: be a high school senior participating in the NYU Upward Bound/1199 Program</p>
-      <p>Application link can be found:<a href="https://forms.gle/wG4btTKC4KC8qmHq6" target="_blank">here</a></p>
-      
-      <p>The scholarship I have opened with my older sister in collaboration with the College Prep Academy/1199 Workforce program was mentioned:<a href="https://steinhardt.nyu.edu/news/news-college-prep-academy-1199-workforce" target="_blank">here</a></p>
+      <div class="outreach-card">
+        <h3>Intro to Bioinstrumentation (Circuits)</h3>
+        <p>Hands-on introduction to bioinstrumentation and circuit fundamentals, designed for high school students in the NYU Upward Bound / 1199 program.</p>
+        <a href="Courses/Summer_Upward_Bound/Course_2.html" target="_blank" class="outreach-btn"><i class="fas fa-external-link-alt"></i> Open Course</a>
       </div>
-      <div id="Hobbies">      
-      <h2>My Hobbies (if videos don't play when you hit play, click on the Pop-out button in the upper right corner of the video)</h2>
-
-	<p> Practicing Archery </p>
-	<iframe src="https://drive.google.com/file/d/1ulP1v3c5d4PstDjUx9zWrFppFTxIXLEr/preview" width="340" height="480" allow="autoplay"></iframe>
-	      
-	<p> Me taking horse riding lessons</p>
-	<iframe src="https://drive.google.com/file/d/16csaU-nQIe_Brp3H3__QpPa1nBJqloGq/preview" width="340" height="380" allow="autoplay"></iframe>
-	      
-	<p> Me playing Guitar (Let her go by Passenger) with slightly different finger picking and strumming pattern</p>
-	<iframe src="https://drive.google.com/file/d/1uOIsEWH0l38zmK6yN9oapiPKDukOx7dn/preview" width="340" height="380" allow="autoplay"></iframe>
-
-	<p> Me practicing Ice skating (it took me a long time to get to this point so if you are just starting I recommend wear a helmet and start with small steps)</p>
-	<iframe src="https://drive.google.com/file/d/1a_OY3fGa-S1F9hi4fVvCKZOSNL3G0TEC/preview" width="340" height="380" allow="autoplay"></iframe>
-
-	<p> Me practicing playing Pirates of the Caribbean theme song in the violin </p>
-	<iframe src="https://drive.google.com/file/d/1j3dDr-xDHRQhrxgPjIbWSOdI9PnwScUn/preview" width="340" height="380" allow="autoplay"></iframe>
-
-	<h4> Exploring hidden relationships between nature, natural Phenomenon (Physics), and Mathematics </h4>
-
-	<p> This natural phenomenon, its called ripping caustics. You notice how the sun light arrays pass through the water waves there is light patches in some areas but other areas appear less bright. This is how you see physics come into play in nature's patters. If you want to read more about the physics of this you can read the following: <a href="https://www.onlandscape.co.uk/2019/01/physics-of-caustic-light-in-water/" target="_blank"> here </a> </p>
-		
-        <p> Some of this ideas date back to Leanardo de Vinci. In this publication you can see an abstract mathemematical representation of how this natural phenomenon occurs by using a cosine waves (trigonometry) as a abstract representation of water waves and lines (algebra) as the sun arrays </p>
-												   
-	<iframe src="https://drive.google.com/file/d/1f1DR3w2KUxqRUJkfXsXEEj_vxcKsC0v1/preview" width="340" height="380" allow="autoplay"></iframe>
-
-	<p> This natural phenomenon is called sun glitter, read more about it: <a href="https://en.wikipedia.org/wiki/Sun_glitter" target="_blank"> here </a> </p>
-
-	<iframe src="https://drive.google.com/file/d/1mZLDVexVffJDVmaehCge-sg5diwIgJnz/preview" width="340" height="380" allow="autoplay"></iframe>
+      <div class="outreach-card">
+        <h3>NYU College Prep Academy / Upward Bound</h3>
+        <p>Staff site for the College Prep Academy / 1199 Workforce Program — resources, activities, and materials for the program team.</p>
+        <a href="https://sites.google.com/view/daltonhb/home?authuser=0" target="_blank" class="outreach-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
       </div>
-      <br></br>
-      <div id="footer">
-        <a href="https://github.com/ngebodh/ngebodh.github.io" target="_blank">Most template taken from 
-Nigel Gebodh GitHub repository</a>
+      <div class="outreach-card">
+        <h3>MRI Tumor Rendering</h3>
+        <p>3D visualization of a tumor extracted from MRI image data — a demonstration project bridging imaging physics and visual communication.</p>
+        <a href="https://drive.google.com/file/d/1daH3AoEUhCAYSEGKefP_IxvuF2vqGhx_/view?usp=sharing" target="_blank" class="outreach-btn"><i class="fas fa-play"></i> Watch Video</a>
       </div>
     </div>
 
-<script type="text/javascript">
-      setTimeout(function() {
-        document.getElementById("loading").classList.add("animated");
-        document.getElementById("loading").classList.add("fadeOut");
-        setTimeout(function() {
-          document.getElementById("loading").classList.remove("animated");
-          document.getElementById("loading").classList.remove("fadeOut");
-          document.getElementById("loading").style.display = "none";
-        }, 800);
-      }, 1500);
-      $.getJSON("blog.json", function(blog) {
-        blog = blog || [];
-        if (blog.length == 0) {
-          return (document.getElementById("blog_section").style.display =
-            "none");
-        }
-        for (var i = 0; i < blog.length; i++) {
-          $("#blogs").append(`
-            <a href="./blog/${blog[i].url_title}/" target="_blank">
-                <section>
-                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
-                    <div class="blog_container">
-                        <div class="section_title">${blog[i].title}</div>
-                        <div class="about_section">
-                            ${blog[i].sub_title}
-                        </div>
-                    </div>
-                </section>
-            </a>
-            `);
-        }
-      }).fail(function() {
-        return (document.getElementById("blog_section").style.display = "none");
-      });
-    </script>
+    <div class="scholarship-card">
+      <h3>Bermudez-Cabrera Hermandad Scholarship</h3>
+      <p>A scholarship founded with my sister in collaboration with the NYU College Prep Academy / 1199 Workforce Program, supporting high school seniors pursuing STEM majors or technical careers. Three winners are selected annually, each receiving funding in two installments — upon selection and upon proof of enrollment.</p>
+      <p><strong>Eligibility:</strong> High school seniors enrolled in the NYU Upward Bound / 1199 Program.</p>
+      <p>The scholarship was featured in:</p>
+      <div class="sch-links">
+        <a href="https://forms.gle/wG4btTKC4KC8qmHq6" target="_blank" class="sch-btn"><i class="fas fa-file-alt"></i> Application</a>
+        <a href="https://steinhardt.nyu.edu/news/news-college-prep-academy-1199-workforce" target="_blank" class="sch-btn"><i class="fas fa-newspaper"></i> NYU Steinhardt Feature</a>
+      </div>
+    </div>
 
-    <script>
-      const magicProjectsGrid = new MagicGrid({
-        container: "#work_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
+  </div>
+</section>
 
-      const magicForksGrid = new MagicGrid({
-        container: "#forks_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
+<!-- ═══════ HOBBIES ═══════ -->
+<section id="hobbies">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Outside the Lab</span>
+      <h2 class="section-title">Hobbies &amp; Interests</h2>
+    </div>
+    <p class="hobbies-intro">
+      When I'm not at the MRI scanner, I explore other ways of seeing the world — from the physics of
+      light patterns on water to the geometry of a guitar chord. If a video doesn't play, use the
+      pop-out button in the upper-right corner of the player.
+    </p>
+    <div class="hobbies-grid">
 
-      $("document").ready(() => {
-        magicProjectsGrid.listen();
-        magicForksGrid.listen();
-      });
-    </script>
-  
-  
+      <div class="hobby-card">
+        <div class="hobby-label">🏹 Archery<span>Precision &amp; focus</span></div>
+        <div class="hobby-media">
+          <iframe src="https://drive.google.com/file/d/1ulP1v3c5d4PstDjUx9zWrFppFTxIXLEr/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+      </div>
 
-</body></html>
+      <div class="hobby-card">
+        <div class="hobby-label">🐴 Equestrian<span>Horse riding lessons</span></div>
+        <div class="hobby-media">
+          <iframe src="https://drive.google.com/file/d/16csaU-nQIe_Brp3H3__QpPa1nBJqloGq/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-label">🎸 Guitar<span>"Let Her Go" by Passenger — custom picking pattern</span></div>
+        <div class="hobby-media">
+          <iframe src="https://drive.google.com/file/d/1uOIsEWH0l38zmK6yN9oapiPKDukOx7dn/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-label">⛸️ Ice Skating<span>Start small — a helmet helps!</span></div>
+        <div class="hobby-media">
+          <iframe src="https://drive.google.com/file/d/1a_OY3fGa-S1F9hi4fVvCNL3G0TEC/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-label">🎻 Violin<span>Pirates of the Caribbean theme</span></div>
+        <div class="hobby-media">
+          <iframe src="https://drive.google.com/file/d/1j3dDr-xDHRQhrxgPjIbWSOdI9PnwScUn/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-label">🌊 Physics in Nature — Ripping Caustics
+          <span>Light patterns through moving water</span>
+        </div>
+        <div class="hobby-media">
+          <iframe src="https://drive.google.com/file/d/1f1DR3w2KUxqRUJkfXsXEEj_vxcKsC0v1/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div class="hobby-note">
+          Ripping caustics — where wave optics meets algebra and trigonometry. An idea traced back to
+          Leonardo da Vinci. <a href="https://www.onlandscape.co.uk/2019/01/physics-of-caustic-light-in-water/" target="_blank">Read more</a>
+        </div>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-label">☀️ Sun Glitter<span>Another hidden gem of applied physics</span></div>
+        <div class="hobby-media">
+          <iframe src="https://drive.google.com/file/d/1mZLDVexVffJDVmaehCge-MS6BC5RbKbv/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div class="hobby-note">
+          <a href="https://en.wikipedia.org/wiki/Sun_glitter" target="_blank">Sun glitter</a> — specular reflections of sunlight off the surface of a body of water.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    Dalton H. Bermudez &nbsp;·&nbsp;
+    PhD Candidate in Medical Physics, UW–Madison &nbsp;·&nbsp;
+    <a href="https://github.com/DBermudez0" target="_blank">GitHub</a> &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/dalton-bermudez-0916b5124/" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="https://scholar.google.com/citations?user=a4FZoYcAAAAJ&hl=en" target="_blank">Google Scholar</a>
+  </p>
+  <p style="margin-top:10px;">
+    Page template inspired by
+    <a href="https://github.com/ngebodh/ngebodh.github.io" target="_blank">Nigel Gebodh</a>.
+  </p>
+</footer>
+
+<script>
+/* ── Loading ── */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const loader = document.getElementById('loading');
+    loader.classList.add('fade');
+    setTimeout(() => loader.remove(), 700);
+  }, 900);
+});
+
+/* ── Hamburger ── */
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* ── Active nav on scroll ── */
+const sections = document.querySelectorAll('section[id], header[id]');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { rootMargin: '-50% 0px -50% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
