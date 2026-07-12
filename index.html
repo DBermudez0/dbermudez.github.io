@@ -287,6 +287,7 @@ section:nth-child(even) { background:var(--card); }
 .pub-card:hover { box-shadow:var(--shadow); transform:translateY(-1px); }
 .pub-thumb {
   width:72px; height:72px; border-radius:7px;
+  .pub-card .pub-content:only-child { grid-column: 1 / -1; }
   object-fit:cover; background:var(--surface);
   flex-shrink:0; border:1px solid var(--border);
 }
