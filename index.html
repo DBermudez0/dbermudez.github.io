@@ -525,6 +525,99 @@ footer a:hover { color:#fff; }
   .hero-mip{margin:0 auto;}
   .hero-mip-frame{width:clamp(160px,34vw,220px);}
 }
+
+
+/* Publication video thumbnail + lightbox */
+.pub-video-thumb {
+  position:relative;
+  width:72px;
+  height:72px;
+  border-radius:7px;
+  overflow:hidden;
+  background:#000;
+  border:1px solid var(--border);
+  flex-shrink:0;
+}
+.pub-video-thumb img,
+.pub-video-thumb iframe {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  border:0;
+}
+.pub-video-thumb img { object-position:center; }
+.pub-video-control {
+  position:absolute;
+  z-index:2;
+  border:0;
+  color:#fff;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(11,25,41,.78);
+  transition:background .15s, transform .15s;
+}
+.pub-video-control:hover { background:var(--accent); }
+.pub-video-play {
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  font-size:13px;
+}
+.pub-video-play:hover { transform:translate(-50%,-50%) scale(1.06); }
+.pub-video-expand {
+  width:24px;
+  height:24px;
+  border-radius:5px;
+  right:4px;
+  top:4px;
+  font-size:10px;
+}
+.video-lightbox {
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(3,10,18,.88);
+  backdrop-filter:blur(5px);
+}
+.video-lightbox.open { display:flex; }
+.video-lightbox-dialog {
+  position:relative;
+  width:min(960px,94vw);
+  aspect-ratio:16/9;
+  background:#000;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 24px 80px rgba(0,0,0,.55);
+}
+.video-lightbox-dialog iframe { width:100%; height:100%; border:0; display:block; }
+.video-lightbox-close {
+  position:absolute;
+  right:14px;
+  top:14px;
+  z-index:3;
+  width:38px;
+  height:38px;
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:50%;
+  background:rgba(11,25,41,.8);
+  color:#fff;
+  font-size:18px;
+  cursor:pointer;
+}
+@media(max-width:680px){
+  .pub-video-thumb { width:100%; height:auto; aspect-ratio:16/9; }
+}
+
 </style>
 </head>
 <body>
@@ -567,7 +660,7 @@ footer a:hover { color:#fff; }
       </p>
       <p class="hero-blurb">
         Engineer and scientist at the intersection of MRI physics, machine learning, and clinical translation.
-        My research spans DTI motion detection, Interventional MRI Guidance for Convection-Enhance Delivery, brain stimulation, and AI-assisted medical imaging.
+        My research spans DTI motion detection, brain stimulation, and AI-assisted medical imaging.
       </p>
       <div class="socials">
         <a href="https://scholar.google.com/citations?user=a4FZoYcAAAAJ&hl=en" target="_blank" class="social-link">
@@ -748,10 +841,21 @@ footer a:hover { color:#fff; }
     <div class="pub-year-group">
       <div class="pub-year-label">2025</div>
       <div class="pub-card">
-        <div class="pub-thumb-placeholder"><i class="fas fa-dna"></i></div>
-        <div class="pub-content">
-          <div class="pub-badges"><span class="badge badge-review">Review Paper</span></div>
-          <div class="pub-title">MR-Guidance of Gene Therapy for Brain Diseases: Moving From Palliative Treatment to Cures</div>
+        <div class="pub-video-thumb" data-video-id="7ABvyedlmsw">
+          <img src="https://img.youtube.com/vi/7ABvyedlmsw/0.jpg"
+               alt="Video preview for MR-Guidance of Gene Therapy for Brain Diseases">
+          <button class="pub-video-control pub-video-play" type="button"
+                  aria-label="Play video in thumbnail" title="Play in thumbnail">
+            <i class="fas fa-play"></i>
+          </button>
+          <button class="pub-video-control pub-video-expand" type="button"
+                  aria-label="Open video in larger player" title="Open larger player">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+<div class="pub-content">
+<div class="pub-badges"><span class="badge badge-review">Review Paper</span></div>
+<div class="pub-title">MR-Guidance of Gene Therapy for Brain Diseases: Moving From Palliative Treatment to Cures</div>
           <div class="pub-authors"><strong>Dalton Bermudez</strong>, Thomas Lilieholm, Walter Block</div>
           <div class="pub-footer">
             <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jmri.29804" target="_blank" class="pub-btn"><i class="fa fa-link"></i> JMRI (2025)</a>
@@ -1228,6 +1332,14 @@ footer a:hover { color:#fff; }
   </div>
 </section>
 
+
+<!-- PUBLICATION VIDEO LIGHTBOX -->
+<div class="video-lightbox" id="publicationVideoLightbox" role="dialog" aria-modal="true"
+     aria-label="Publication video player" aria-hidden="true">
+  <button class="video-lightbox-close" type="button" aria-label="Close video">&times;</button>
+  <div class="video-lightbox-dialog" id="publicationVideoDialog"></div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <p>
@@ -1336,5 +1448,67 @@ showSelectedSection(location.hash.slice(1) || 'about', false);
     window.addEventListener('click', onFirst);
   })();
 </script>
+
+<script>
+/* Publication video: inline thumbnail playback + modal lightbox */
+(function () {
+  const lightbox = document.getElementById('publicationVideoLightbox');
+  const dialog = document.getElementById('publicationVideoDialog');
+  const closeButton = lightbox ? lightbox.querySelector('.video-lightbox-close') : null;
+
+  function youtubeFrame(videoId, autoplay) {
+    const frame = document.createElement('iframe');
+    frame.src = 'https://www.youtube.com/embed/' + videoId +
+      '?autoplay=' + (autoplay ? '1' : '0') + '&rel=0&playsinline=1';
+    frame.title = 'MR-Guidance of Gene Therapy for Brain Diseases video';
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    frame.allowFullscreen = true;
+    return frame;
+  }
+
+  document.querySelectorAll('.pub-video-thumb').forEach(function (thumb) {
+    const videoId = thumb.dataset.videoId;
+    const playButton = thumb.querySelector('.pub-video-play');
+    const expandButton = thumb.querySelector('.pub-video-expand');
+
+    playButton.addEventListener('click', function (event) {
+      event.stopPropagation();
+      thumb.innerHTML = '';
+      thumb.appendChild(youtubeFrame(videoId, true));
+    });
+
+    expandButton.addEventListener('click', function (event) {
+      event.stopPropagation();
+      dialog.innerHTML = '';
+      dialog.appendChild(youtubeFrame(videoId, true));
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeButton.focus();
+    });
+  });
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    dialog.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  if (closeButton) closeButton.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', function (event) {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && lightbox && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
