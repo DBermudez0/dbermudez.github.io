@@ -50,7 +50,8 @@
 }
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
 html { scroll-behavior:smooth; scroll-padding-top:var(--nav-h); }
-body { font-family:var(--ff-body); color:var(--text); background:var(--surface); -webkit-font-smoothing:antialiased; }
+body { font-family:var(--ff-body); color:var(--text); background:var(--surface); -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+img, video { max-width:100%; }
 a { color:inherit; text-decoration:none; }
 img { max-width:100%; display:block; }
 @media(prefers-reduced-motion:reduce){ *{ animation-duration:.001ms!important; transition-duration:.001ms!important; } }
@@ -479,20 +480,47 @@ footer a:hover { color:#fff; }
 ═══════════════════════════════════════════════════ */
 @media(max-width:900px){
   .hero-inner { grid-template-columns:1fr; }
-  .hero-stats { flex-direction:row; border-left:none; padding-left:0; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; justify-content:space-around; }
+  .hero-stats { flex-direction:row; flex-wrap:wrap; border-left:none; padding-left:0; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; justify-content:space-around; align-items:flex-start; gap:20px; }
   .about-grid { grid-template-columns:1fr; }
   .projects-grid { grid-template-columns:1fr; }
   .awards-grid { grid-template-columns:1fr; }
   .outreach-grid { grid-template-columns:1fr; }
   .hobbies-grid { grid-template-columns:repeat(2,1fr); }
-}
-@media(max-width:680px){
+  /* collapse nav to hamburger here so the link row can't overflow on tablets */
   .nav-links { display:none; flex-direction:column; position:absolute; top:var(--nav-h); left:0; right:0; background:rgba(11,25,41,0.98); padding:16px; gap:4px; }
   .nav-links.open { display:flex; }
+  .nav-links a { padding:10px 12px; }
   .hamburger { display:flex; }
+}
+@media(max-width:680px){
   .hobbies-grid { grid-template-columns:1fr; }
   .pub-card { grid-template-columns:1fr; }
   .pub-thumb, .pub-thumb-placeholder { display:none; }
+  /* media panels + stats stack vertically and center on phones */
+  .hero-stats { flex-direction:column; align-items:center; }
+  .hero-media { flex-direction:row; flex-wrap:wrap; justify-content:center; }
+}
+@media(max-width:420px){
+  /* keep the three hero photos on one row on the smallest phones */
+  .hero-photos { gap:8px; }
+  .hero-photos img { width:64px; height:64px; }
+  .hero-media { flex-direction:column; }
+  section { padding:48px 0; }
+}
+/* HERO MEDIA — rotating PET MIP video + fMRI surface video */
+.hero-media{display:flex;flex-direction:column;gap:16px;flex-shrink:0;}
+.hero-mip{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.hero-mip-frame{position:relative;width:clamp(180px,16vw,220px);aspect-ratio:1/1;border-radius:var(--r);overflow:hidden;background:#000;border:1px solid rgba(255,255,255,0.12);box-shadow:0 8px 30px rgba(0,0,0,0.45),0 0 0 1px rgba(8,145,178,0.15),inset 0 0 40px rgba(8,145,178,0.10);}
+.hero-mip-frame.is-fmri{aspect-ratio:802/658;background:#000;}
+.hero-mip-frame img,.hero-mip-frame video{width:100%;height:100%;object-fit:contain;display:block;}
+.hero-mip-frame::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(255,255,255,0.02) 4px);}
+.hero-mip-caption{font-family:var(--ff-mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-align:center;line-height:1.5;}
+.hero-mip-caption b{color:var(--accent-2);font-weight:700;}
+/* on tablets the media panels can sit wider; cap so they don't dominate */
+@media(max-width:900px){
+  .hero-media{margin:0 auto;}
+  .hero-mip{margin:0 auto;}
+  .hero-mip-frame{width:clamp(160px,34vw,220px);}
 }
 </style>
 </head>
@@ -554,6 +582,32 @@ footer a:hover { color:#fff; }
       </div>
     </div>
     <div class="hero-stats">
+      <div class="hero-media">
+        <div class="hero-mip">
+          <div class="hero-mip-frame">
+            <video id="petVideo" autoplay muted loop playsinline webkit-playsinline
+                   preload="auto" disablepictureinpicture
+                   poster="MIP_PET_rotation_jet_windowed.gif"
+                   aria-label="Rotating PET maximum-intensity projection (jet colormap, windowed)">
+              <source src="images/MIP_PET_rotation_jet.mp4" type="video/mp4">
+              <source src="images/MIP_PET_rotation_jet.mov" type="video/quicktime">
+            </video>
+          </div>
+          <div class="hero-mip-caption">Rotating PET MIP · <b>jet</b></div>
+        </div>
+        <div class="hero-mip">
+          <div class="hero-mip-frame is-fmri">
+            <video id="fmriVideo" autoplay muted loop playsinline webkit-playsinline
+                   preload="auto" disablepictureinpicture
+                   poster="fMRI_brain_surface.png"
+                   aria-label="Rotating 7T fMRI cortical surface BOLD activation">
+              <source src="fMRI_surface_7T.mp4" type="video/mp4">
+              <source src="fMRI_surface_7T.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="hero-mip-caption">7T fMRI surface · <b>BOLD</b></div>
+        </div>
+      </div>
       <div class="stat-item">
         <span class="stat-num">10+</span>
         <span class="stat-label">Publications</span>
@@ -670,6 +724,22 @@ footer a:hover { color:#fff; }
       <span class="section-eyebrow">Research Output</span>
       <h2 class="section-title">Publications</h2>
     </div>
+
+    <!-- 2026 -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">2026</div>
+      <div class="pub-card">
+        <div class="pub-thumb-placeholder"><i class="fas fa-dna"></i></div>
+        <div class="pub-content">
+          <div class="pub-badges"><span class="badge badge-review">Abstract</span></div>
+          <div class="pub-title">Methods for simulating advanced MR guided cortical brain gene therapy</div>
+          <div class="pub-authors"><strong>Dalton Bermudez</strong>, Aidan Burich, Walter Block</div>
+          <div class="pub-footer">
+            <a href="https://www.researchgate.net/publication/408420903_Methods_for_simulating_advanced_MR_guided_cortical_brain_gene_therapy" target="_blank" class="pub-btn"><i class="fa fa-link"></i> 15th Interventional MRI Symposium (2026)</a>
+            <div class="pub-meta"><span><i class="fas fa-book-reader"></i> 24 reads</span></div>
+          </div>
+        </div>
+      </div>
 
     <!-- 2025 -->
     <div class="pub-year-group">
@@ -1199,6 +1269,36 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { rootMargin: '-50% 0px -50% 0px' });
 sections.forEach(s => observer.observe(s));
+</script>
+<script>
+  // Autoplay + loop the hero videos (PET MIP + fMRI) without any click.
+  (function () {
+    var vids = [document.getElementById('petVideo'),
+                document.getElementById('fmriVideo')].filter(Boolean);
+    if (!vids.length) return;
+    var tryPlayAll = function () {
+      vids.forEach(function (v) {
+        v.muted = true; v.defaultMuted = true; v.setAttribute('muted', '');
+        var p = v.play();
+        if (p && p.catch) { p.catch(function () {}); }
+      });
+    };
+    tryPlayAll();
+    vids.forEach(function (v) {
+      v.addEventListener('loadeddata', tryPlayAll);
+      v.addEventListener('canplay', tryPlayAll);
+    });
+    document.addEventListener('DOMContentLoaded', tryPlayAll);
+    var onFirst = function () {
+      tryPlayAll();
+      window.removeEventListener('scroll', onFirst);
+      window.removeEventListener('touchstart', onFirst);
+      window.removeEventListener('click', onFirst);
+    };
+    window.addEventListener('scroll', onFirst, { passive: true });
+    window.addEventListener('touchstart', onFirst, { passive: true });
+    window.addEventListener('click', onFirst);
+  })();
 </script>
 </body>
 </html>
