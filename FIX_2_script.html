@@ -1,0 +1,97 @@
+<!-- ════════════════════════════════════════════════════════════
+     FIX #2 — Replace the publication-video <script> block.
+
+     FIND the existing script that starts with:
+         /* Publication video: inline thumbnail playback + modal lightbox */
+     ...and REPLACE THE WHOLE (function () { ... })(); block with the one below.
+
+     What changed: the original only knew how to build YouTube iframes from a
+     data-video-id. This version ALSO handles a Repro4Sci card that carries a
+     full URL in data-video-src, embedding that page in an iframe instead.
+     YouTube cards (data-video-id) keep working exactly as before.
+════════════════════════════════════════════════════════════ -->
+<script>
+/* Publication video: inline thumbnail playback + modal lightbox */
+(function () {
+  const lightbox = document.getElementById('publicationVideoLightbox');
+  const dialog = document.getElementById('publicationVideoDialog');
+  const closeButton = lightbox ? lightbox.querySelector('.video-lightbox-close') : null;
+
+  // Build a YouTube embed iframe from a video id.
+  function youtubeFrame(videoId, autoplay) {
+    const frame = document.createElement('iframe');
+    frame.src = 'https://www.youtube.com/embed/' + videoId +
+      '?autoplay=' + (autoplay ? '1' : '0') + '&rel=0&playsinline=1';
+    frame.title = 'Publication video';
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    frame.allowFullscreen = true;
+    return frame;
+  }
+
+  // Build a generic embed iframe from a full URL (used for the Repro4Sci page).
+  function urlFrame(url) {
+    const frame = document.createElement('iframe');
+    frame.src = url;
+    frame.title = 'Publication video';
+    frame.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+    frame.allowFullscreen = true;
+    return frame;
+  }
+
+  // Choose the right iframe for a given thumb element.
+  function frameFor(thumb, autoplay) {
+    if (thumb.dataset.videoSrc) return urlFrame(thumb.dataset.videoSrc);
+    if (thumb.dataset.videoId) return youtubeFrame(thumb.dataset.videoId, autoplay);
+    return null;
+  }
+
+  document.querySelectorAll('.pub-video-thumb').forEach(function (thumb) {
+    const playButton = thumb.querySelector('.pub-video-play');
+    const expandButton = thumb.querySelector('.pub-video-expand');
+
+    if (playButton) {
+      playButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const frame = frameFor(thumb, true);
+        if (!frame) return;
+        thumb.innerHTML = '';
+        thumb.appendChild(frame);
+      });
+    }
+
+    if (expandButton) {
+      expandButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const frame = frameFor(thumb, true);
+        if (!frame) return;
+        dialog.innerHTML = '';
+        dialog.appendChild(frame);
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        closeButton.focus();
+      });
+    }
+  });
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    dialog.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  if (closeButton) closeButton.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', function (event) {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && lightbox && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>
