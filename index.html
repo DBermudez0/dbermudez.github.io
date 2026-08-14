@@ -1464,36 +1464,61 @@ showSelectedSection(location.hash.slice(1) || 'about', false);
   const dialog = document.getElementById('publicationVideoDialog');
   const closeButton = lightbox ? lightbox.querySelector('.video-lightbox-close') : null;
 
+  // Build a YouTube embed iframe from a video id.
   function youtubeFrame(videoId, autoplay) {
     const frame = document.createElement('iframe');
     frame.src = 'https://www.youtube.com/embed/' + videoId +
       '?autoplay=' + (autoplay ? '1' : '0') + '&rel=0&playsinline=1';
-    frame.title = 'MR-Guidance of Gene Therapy for Brain Diseases video';
+    frame.title = 'Publication video';
     frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     frame.allowFullscreen = true;
     return frame;
   }
 
+  // Build a generic embed iframe from a full URL (used for the Repro4Sci page).
+  function urlFrame(url) {
+    const frame = document.createElement('iframe');
+    frame.src = url;
+    frame.title = 'Publication video';
+    frame.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+    frame.allowFullscreen = true;
+    return frame;
+  }
+
+  // Choose the right iframe for a given thumb element.
+  function frameFor(thumb, autoplay) {
+    if (thumb.dataset.videoSrc) return urlFrame(thumb.dataset.videoSrc);
+    if (thumb.dataset.videoId) return youtubeFrame(thumb.dataset.videoId, autoplay);
+    return null;
+  }
+
   document.querySelectorAll('.pub-video-thumb').forEach(function (thumb) {
-    const videoId = thumb.dataset.videoId;
     const playButton = thumb.querySelector('.pub-video-play');
     const expandButton = thumb.querySelector('.pub-video-expand');
 
-    playButton.addEventListener('click', function (event) {
-      event.stopPropagation();
-      thumb.innerHTML = '';
-      thumb.appendChild(youtubeFrame(videoId, true));
-    });
+    if (playButton) {
+      playButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const frame = frameFor(thumb, true);
+        if (!frame) return;
+        thumb.innerHTML = '';
+        thumb.appendChild(frame);
+      });
+    }
 
-    expandButton.addEventListener('click', function (event) {
-      event.stopPropagation();
-      dialog.innerHTML = '';
-      dialog.appendChild(youtubeFrame(videoId, true));
-      lightbox.classList.add('open');
-      lightbox.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      closeButton.focus();
-    });
+    if (expandButton) {
+      expandButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const frame = frameFor(thumb, true);
+        if (!frame) return;
+        dialog.innerHTML = '';
+        dialog.appendChild(frame);
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        closeButton.focus();
+      });
+    }
   });
 
   function closeLightbox() {
@@ -1517,6 +1542,5 @@ showSelectedSection(location.hash.slice(1) || 'about', false);
   });
 })();
 </script>
-
 </body>
 </html>
